@@ -1,0 +1,7 @@
+{
+  "git.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "always",
+    "source.fixAll.eslint": "always"
+  },
+}
