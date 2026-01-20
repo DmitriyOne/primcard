@@ -16,5 +16,8 @@
     "**/.git/**",
     "**/node_modules/**",
     "**/.next/**"
+  ],
+  "cSpell.words": [
+    "Primcard"
   ]
 }
