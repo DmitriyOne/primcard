@@ -1,20 +1,18 @@
-import { ReactNode } from "react"
+import type { PropsWithChildren } from "react"
 import type { Metadata } from "next"
-import { Poppins } from "next/font/google"
+import { Plus_Jakarta_Sans } from "next/font/google"
 
 import { FullScreen } from "@/src/06_shared/ui"
 
 import "./globals.css"
 
-const poppinsSans = Poppins({
-  variable: "--font-poppins",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 })
 
-type TProps = Readonly<{
-  children: ReactNode
-}>
+type TProps = Readonly<PropsWithChildren>
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: TProps) {
   return (
     <html lang='en'>
-      <body className={`${poppinsSans.variable} antialiased`}>
+      <body className={`${plusJakartaSans.variable} antialiased`}>
         <FullScreen>
           {children}
         </FullScreen>

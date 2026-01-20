@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-plus-jakarta-sans);
 
   --text-2xl: 24px;
   --text-3xl: 28px;
@@ -38,5 +38,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  font-family: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
 }
