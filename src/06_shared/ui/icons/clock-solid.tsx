@@ -1,0 +1,25 @@
+type TProps = {
+  className?: string
+}
+
+export const IconClockSolid = ({ className }: TProps) => {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      viewBox="0 0 27 27"
+      className={className}
+    >
+      <path
+        d="M17.646 17.646l-4.223-4.223V4.979"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+      />
+      <path
+        d="M13.417 26.083c3.359 0 6.581-1.335 8.957-3.71s3.71-5.597 3.71-8.957-1.335-6.581-3.71-8.957S16.776.75 13.417.75 6.835 2.085 4.46 4.46.75 10.057.75 13.417s1.335 6.581 3.71 8.957 5.597 3.71 8.957 3.71z"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}

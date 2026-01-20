@@ -1,0 +1,20 @@
+
+type TProps = {
+  className?: string
+}
+
+export const IconEth = ({ className }: TProps) => {
+  return (
+    <svg
+      fill="currentColor"
+      opacity="0.8"
+      viewBox="0 0 18 31"
+      className={className}
+    >
+      <path d="M9.001 0l-.197.668V20.06l.197.196 9.001-5.321L9.001 0z" />
+      <path d="M9.001 0L0 14.935l9.001 5.321v-9.412V0zm0 23.185l-.111.135v6.908l.111.324 9.007-12.684-9.007 5.318z" />
+      <path d="M9.001 30.551v-7.366L0 17.867l9.001 12.684zm0-10.295l9.001-5.321-9.001-4.091v9.412z" />
+      <path d="M0 14.935l9.001 5.321v-9.412L0 14.935z" />
+    </svg>
+  )
+}
