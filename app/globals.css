@@ -9,6 +9,23 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
+
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 32px;
+  --text-5xl: 44px;
+  --text-6xl: 56px;
+  --text-7xl: 64px;
+
+  --color-white: #FFFFFF;
+  --color-dark: #050100; 
+  --color-gray-light: #D6D6D6;
+  --color-gray-medium: #191919;
+  --color-gray-dark: #0D0D0D;
+  --color-primary: #FF7714;
+  --color-primary-dark: #302219;
+  --color-yellow: #FFD900;
+  --color-red: #D92D20;
 }
 
 /* @media (prefers-color-scheme: dark) {

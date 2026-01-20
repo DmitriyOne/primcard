@@ -2,6 +2,8 @@ import { ReactNode } from "react"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 
+import { FullScreen } from "@/src/06_shared/ui"
+
 import "./globals.css"
 
 const poppinsSans = Poppins({
@@ -23,7 +25,9 @@ export default function RootLayout({ children }: TProps) {
   return (
     <html lang='en'>
       <body className={`${poppinsSans.variable} antialiased`}>
-        {children}
+        <FullScreen>
+          {children}
+        </FullScreen>
       </body>
     </html>
   )

@@ -1,6 +1,6 @@
 import { cn } from "@/src/06_shared/lib/tailwind"
 import { ICONS } from "@/src/06_shared/constants"
-import type { TIconId } from "@/src/06_shared/types"
+import type { TIconId, TPosition } from "@/src/06_shared/types"
 
 type TBgRounded = "sm" | "full"
 type TBackground = {
@@ -13,13 +13,17 @@ const roundedClassByValue: Record<TBgRounded, string> = {
   full: "rounded-full",
 }
 
-type TProps = {
+export type TIconProps = {
   id: TIconId
   className?: string
   background?: TBackground
 }
 
-export const Icon = ({ id, className, background }: TProps) => {
+export type TIconWithPositionProps = TIconProps & {
+  position: TPosition
+}
+
+export const Icon = ({ id, className, background }: TIconProps) => {
 
   const Comp = ICONS[id]
 
