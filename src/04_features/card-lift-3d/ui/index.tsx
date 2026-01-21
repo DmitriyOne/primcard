@@ -1,0 +1,44 @@
+"use client"
+
+import Image from "next/image"
+
+import heroImage from "../../../../public/images/home/hero-card.jpg"
+import { cn } from "@/src/06_shared/lib"
+import { useCardLift3d } from "@/src/06_shared/hooks"
+
+type TProps = {
+  className?: string
+}
+
+export const CardLift3d = ({ className }: TProps) => {
+  const { ref, rotateX } = useCardLift3d()
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "relative",
+        "w-[300px] h-[200px] md:h-[320px] md:w-[500px] lg:w-[650px] lg:h-[420px]",
+        className,
+      )}
+      style={{
+        transform: `perspective(1200px) rotateX(${rotateX}deg)`,
+        transformStyle: "preserve-3d",
+        transformOrigin: "bottom center",
+      }}
+    >
+      {/* <div className="absolute t-0 l-0 w-full h-full bg-linear-to-b from-black to-transparent z-1" /> */}
+      <Image
+        src={heroImage}
+        alt="Hero card"
+        className="w-full h-full object-cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        fill
+        style={{
+          objectFit: "contain",
+          objectPosition: "center",
+        }}
+      />
+    </div>
+  )
+}
