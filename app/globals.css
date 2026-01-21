@@ -26,6 +26,8 @@
   --color-primary-dark: #302219;
   --color-yellow: #FFD900;
   --color-red: #D92D20;
+
+  --breakpoint-2lg: 73.75rem;
 }
 
 /* @media (prefers-color-scheme: dark) {

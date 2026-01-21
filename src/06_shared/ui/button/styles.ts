@@ -14,7 +14,7 @@ export const getButtonStyles = (
       "rounded-full cursor-pointer",
       "border-[0.5px] border-solid",
       "text-sm md:text-base font-light",
-      "px-4 py-2 md:px-6 md:py-3",
+      "px-6 py-3",
       "transition-all duration-300",
       "disabled:cursor-not-allowed disabled:opacity-40",
       styles?.base,

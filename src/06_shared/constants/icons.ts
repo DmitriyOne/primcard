@@ -11,7 +11,7 @@ import { IconCreditCardArrowSolid } from "@/src/06_shared/ui/icons/credit-card-a
 import { IconCreditCardSolid } from "@/src/06_shared/ui/icons/credit-card-solid"
 import { IconEth } from "@/src/06_shared/ui/icons/eth"
 import { IconGlobeSolid } from "@/src/06_shared/ui/icons/globe-solid"
-import { IconLogo } from "@/src/06_shared/ui/icons/logo"
+import { IconLogo, IconLogoFull } from "@/src/06_shared/ui/icons/logo"
 import { IconMastercardLogo } from "@/src/06_shared/ui/icons/mastercard-logo"
 import { IconMinus } from "@/src/06_shared/ui/icons/minus"
 import { IconPhysicalCard } from "@/src/06_shared/ui/icons/physical-card"
@@ -23,6 +23,7 @@ import { IconWalletSolid } from "@/src/06_shared/ui/icons/wallet-solid"
 
 export const ICONS = {
   logo: IconLogo,
+  logoFull: IconLogoFull,
   telegram: IconTelegram,
   physicalCard: IconPhysicalCard,
   chinaFlag: IconChinaFlag,

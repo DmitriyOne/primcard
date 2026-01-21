@@ -25,7 +25,7 @@ export const ActiveLink = ({
   const isActive = pathname === href
 
   const componentClassName = cn(
-    "inline-block cursor-pointer transition-all duration-300",
+    "block cursor-pointer transition-all duration-300",
     "font-inter font-medium",
     "text-lg text-dark-black tracking-tight leading-[1.4]",
     !isActive && "lg:hover:underline",
@@ -35,9 +35,9 @@ export const ActiveLink = ({
 
   if (isActive) {
     return (
-      <span className={componentClassName}>
+      <div className={componentClassName}>
         {children}
-      </span>
+      </div>
     )
   }
 
