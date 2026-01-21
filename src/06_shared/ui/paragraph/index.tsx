@@ -2,14 +2,14 @@ import type { HTMLAttributes, PropsWithChildren } from "react"
 
 import { cn } from "@/src/06_shared/lib"
 
-type TVariant = "primary" | "secondary" | "tertiary"
+type TVariant = "primary" | "secondary"
 
 type TProps = HTMLAttributes<HTMLParagraphElement> & PropsWithChildren & {
   variant?: TVariant
 }
 
 export const Paragraph = ({
-  variant = "tertiary",
+  variant,
   className,
   children,
   ...props

@@ -7,10 +7,19 @@ type TProps = {
   className?: string
   itemClassName?: string
   linkClassName?: string
+  linkTitleClassName?: string
   onCloseMenu?: () => void
 }
 
-export const Menu = ({ items, className, itemClassName, linkClassName, onCloseMenu }: TProps) => {
+export const Menu = ({
+  items,
+  className,
+  itemClassName,
+  linkClassName,
+  linkTitleClassName,
+  onCloseMenu,
+}: TProps) => {
+
   return (
     <ul
       className={cn(
@@ -25,6 +34,7 @@ export const Menu = ({ items, className, itemClassName, linkClassName, onCloseMe
           item={item}
           className={itemClassName}
           linkClassName={linkClassName}
+          linkTitleClassName={linkTitleClassName}
           onClick={onCloseMenu}
         />
       ))}

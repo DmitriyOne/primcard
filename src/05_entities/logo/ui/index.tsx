@@ -16,7 +16,7 @@ export const Logo = ({
     <ActiveLink
       href={paths.home}
       className={cn(
-        "w-26 md:w-36",
+        "w-36",
         className,
       )}
     >

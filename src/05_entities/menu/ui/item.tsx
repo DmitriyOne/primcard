@@ -3,34 +3,37 @@
 import type { TMenuItem } from "@/src/05_entities/menu/types"
 import { TMenuItemType } from "@/src/05_entities/menu/types"
 import { cn } from "@/src/06_shared/lib"
-import { ActiveLink, Button, ButtonIcon } from "@/src/06_shared/ui"
+import { ActiveLink, Button, LinkIcon } from "@/src/06_shared/ui"
 import { useCallback } from "react"
 
 type TProps = {
   item: TMenuItem
   className?: string
   linkClassName?: string
+  linkTitleClassName?: string
   onClick?: () => void
 }
 
 type TItemProps = Omit<TProps, "className"> & {
   linkClassName?: string
+  linkTitleClassName?: string
 }
 
-const MenuItemButtonIcon = ({ item, linkClassName, onClick }: TItemProps) => {
+const MenuItemButtonIcon = ({ item, linkClassName, linkTitleClassName, onClick }: TItemProps) => {
   if (item.type !== TMenuItemType.BUTTON_ICON) return null
 
   const buttonIconItem = item as Extract<TMenuItem, { type: typeof TMenuItemType.BUTTON_ICON }>
 
-  // TODO: change to link icon and add href
   return (
-    <ButtonIcon
+    <LinkIcon
+      href={item.href}
       icon={{ id: buttonIconItem.icon, position: "left" }}
       title={buttonIconItem.label}
       variant={buttonIconItem.variant}
-      className={linkClassName}
+      className={cn("text-base md:text-base font-bold", linkClassName)}
+      titleClassName={linkTitleClassName}
       onClick={onClick}
-      disabled={item.href.includes("test")}
+      target="_blank"
     />
   )
 }
@@ -41,10 +44,11 @@ const MenuItemButton = ({ item, linkClassName, onClick }: TItemProps) => {
   const buttonItem = item as Extract<TMenuItem, { type: typeof TMenuItemType.BUTTON }>
 
   // TODO: change to my link and add href
+  // TODO: add titleClassName={linkTitleClassName}
   return (
     <Button
       variant={buttonItem.variant}
-      className={linkClassName}
+      className={cn("text-base md:text-base font-bold", linkClassName)}
       onClick={onClick}
       disabled={item.href.includes("test")}
     >
@@ -77,6 +81,7 @@ export const MenuItem = ({
   item,
   className,
   linkClassName,
+  linkTitleClassName,
   onClick,
 }: TProps) => {
 
@@ -99,6 +104,7 @@ export const MenuItem = ({
       <Comp
         item={item}
         linkClassName={linkClassName}
+        linkTitleClassName={linkTitleClassName}
         onClick={handleClick}
       />
     </li>
