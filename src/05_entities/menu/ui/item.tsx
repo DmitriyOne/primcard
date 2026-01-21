@@ -3,7 +3,7 @@
 import type { TMenuItem } from "@/src/05_entities/menu/types"
 import { TMenuItemType } from "@/src/05_entities/menu/types"
 import { cn } from "@/src/06_shared/lib"
-import { ActiveLink, Button, ButtonIcon, LinkIcon } from "@/src/06_shared/ui"
+import { ActiveLink, Button, ButtonIcon } from "@/src/06_shared/ui"
 import { useCallback } from "react"
 
 type TProps = {
