@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "fixed w-full top-0",
+        "absolute w-full top-0",
         "px-4 py-4 lg:py-5",
         Z_INDEX_CLASSES.HEADER,
       )}
@@ -26,7 +26,7 @@ export const Header = () => {
         )}>
         <Logo
           className={cn(
-            "w-8 lg:mt-[-6px] relative",
+            "max-md:w-8 lg:mt-[-6px] relative",
             Z_INDEX_CLASSES.HEADER_LOGO,
           )}
           isShowShortIconOnMobile
