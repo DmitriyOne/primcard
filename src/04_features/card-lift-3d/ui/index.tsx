@@ -11,7 +11,7 @@ type TProps = {
 }
 
 export const CardLift3d = ({ className }: TProps) => {
-  const { ref, rotateX } = useCardLift3d()
+  const { ref, rotateX, gradientOpacity } = useCardLift3d()
 
   return (
     <div
@@ -27,7 +27,10 @@ export const CardLift3d = ({ className }: TProps) => {
         transformOrigin: "bottom center",
       }}
     >
-      {/* <div className="absolute t-0 l-0 w-full h-full bg-linear-to-b from-black to-transparent z-1" /> */}
+      <div
+        className="absolute t-0 l-0 w-full h-full bg-linear-to-b from-black to-transparent z-1"
+        style={{ opacity: gradientOpacity }}
+      />
       <Image
         src={heroImage}
         alt="Hero card"

@@ -2,16 +2,17 @@ import { useEffect, useRef, useState } from "react"
 
 import { isServer } from "@/src/06_shared/utils"
 
-const SCROLL_OFFSET = 20 // First 20px of scroll - do nothing
-const MIN_VISIBILITY = 0.25 // At least 25% of card must be visible
-const START_ANGLE = 45 // Card lies back (tilted in)
+const SCROLL_OFFSET = 60 // First 20px of scroll - do nothing
+const MIN_VISIBILITY = 0.4 // At least 25% of card must be visible
+const START_ANGLE = 55 // Card lies back (tilted in)
 const END_ANGLE = 0 // Card stands straight
-const SCROLL_RANGE = 200 // Scroll range for full lift (smaller for faster lift)
+const SCROLL_RANGE = 300 // Scroll range for full lift (smaller for faster lift)
 const CENTER_ZONE = 100 // Zone around screen center for smooth alignment
 
 export const useCardLift3d = () => {
   const ref = useRef<HTMLDivElement>(null)
   const [rotateX, setRotateX] = useState(START_ANGLE)
+  const [gradientOpacity, setGradientOpacity] = useState(1)
   const rafIdRef = useRef<number | null>(null)
 
   useEffect(() => {
@@ -37,14 +38,17 @@ export const useCardLift3d = () => {
       const centerOffset = cardCenter - screenCenter
 
       let angle: number
+      let opacity: number
 
       // If scroll is less than offset - do nothing
       if (scrollTop < SCROLL_OFFSET) {
         angle = START_ANGLE
+        opacity = 1
       }
       // If card is less than 25% visible - wait
       else if (visibilityRatio < MIN_VISIBILITY) {
         angle = START_ANGLE
+        opacity = 1
       }
       // Card is >= 25% visible and scroll >= offset - lift it
       else {
@@ -68,9 +72,13 @@ export const useCardLift3d = () => {
         // Use easing function for smoother lift
         const easedProgress = finalProgress * finalProgress * (3 - 2 * finalProgress) // smoothstep
         angle = START_ANGLE + (END_ANGLE - START_ANGLE) * easedProgress
+        
+        // Calculate gradient opacity: starts at 1, fades to 0 as card lifts
+        opacity = 1 - easedProgress
       }
 
       setRotateX(angle)
+      setGradientOpacity(opacity)
     }
 
     // Function to update using requestAnimationFrame
@@ -107,5 +115,6 @@ export const useCardLift3d = () => {
   return {
     ref,
     rotateX,
+    gradientOpacity,
   }
 }
