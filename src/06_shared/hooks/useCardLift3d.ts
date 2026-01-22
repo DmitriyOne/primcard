@@ -1,120 +1,60 @@
 import { useEffect, useRef, useState } from "react"
-
 import { isServer } from "@/src/06_shared/utils"
 
-const SCROLL_OFFSET = 60 // First 20px of scroll - do nothing
-const MIN_VISIBILITY = 0.4 // At least 25% of card must be visible
+const SCROLL_OFFSET = 40 // First 40px of scroll - do nothing
 const START_ANGLE = 55 // Card lies back (tilted in)
 const END_ANGLE = 0 // Card stands straight
-const SCROLL_RANGE = 300 // Scroll range for full lift (smaller for faster lift)
-const CENTER_ZONE = 100 // Zone around screen center for smooth alignment
+const SCROLL_RANGE = 240 // Scroll range for full lift (reduced for earlier standing)
 
 export const useCardLift3d = () => {
   const ref = useRef<HTMLDivElement>(null)
   const [rotateX, setRotateX] = useState(START_ANGLE)
   const [gradientOpacity, setGradientOpacity] = useState(1)
-  const rafIdRef = useRef<number | null>(null)
+  const targetRotateXRef = useRef(START_ANGLE)
+  const targetOpacityRef = useRef(1)
 
   useEffect(() => {
     if (isServer() || !ref.current) return
 
-    const element = ref.current
-
-    const calculateRotation = () => {
+    const calculateTargetValues = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
-      const rect = element.getBoundingClientRect()
-      const windowHeight = window.innerHeight
-      const elementHeight = rect.height
-
-      // Calculate card visibility
-      const visibleTop = Math.max(0, -rect.top)
-      const visibleBottom = Math.min(elementHeight, windowHeight - rect.top)
-      const visibleHeight = Math.max(0, visibleBottom - visibleTop)
-      const visibilityRatio = visibleHeight / elementHeight
-
-      // Calculate card center position relative to screen center
-      const cardCenter = rect.top + elementHeight / 2
-      const screenCenter = windowHeight / 2
-      const centerOffset = cardCenter - screenCenter
-
-      let angle: number
-      let opacity: number
-
-      // If scroll is less than offset - do nothing
+      
       if (scrollTop < SCROLL_OFFSET) {
-        angle = START_ANGLE
-        opacity = 1
-      }
-      // If card is less than 25% visible - wait
-      else if (visibilityRatio < MIN_VISIBILITY) {
-        angle = START_ANGLE
-        opacity = 1
-      }
-      // Card is >= 25% visible and scroll >= offset - lift it
-      else {
-        // Basic progress based on scroll
-        const scrollProgress = (scrollTop - SCROLL_OFFSET) / SCROLL_RANGE
-        const clampedScrollProgress = Math.max(0, Math.min(1, scrollProgress))
-        
-        // Extra correction based on card center position
-        // When card center is in screen center zone - smoothly align to 0
-        let centerCorrection = 0
-        if (Math.abs(centerOffset) < CENTER_ZONE) {
-          // Smooth interpolation: closer to center, more correction to 0
-          const centerRatio = 1 - Math.abs(centerOffset) / CENTER_ZONE
-          centerCorrection = centerRatio * centerRatio // Quadratic for smoothness
-        }
-        
-        // Combine: scroll lifts, center aligns
-        const baseProgress = clampedScrollProgress
-        const finalProgress = Math.min(1, baseProgress + centerCorrection * (1 - baseProgress))
-        
-        // Use easing function for smoother lift
-        const easedProgress = finalProgress * finalProgress * (3 - 2 * finalProgress) // smoothstep
-        angle = START_ANGLE + (END_ANGLE - START_ANGLE) * easedProgress
-        
-        // Calculate gradient opacity: starts at 1, fades to 0 as card lifts
-        opacity = 1 - easedProgress
+        targetRotateXRef.current = START_ANGLE
+        targetOpacityRef.current = 1
+        return
       }
 
-      setRotateX(angle)
-      setGradientOpacity(opacity)
+      const progress = Math.min(1, (scrollTop - SCROLL_OFFSET) / SCROLL_RANGE)
+      const easedProgress = progress * progress * (3 - 2 * progress)
+      
+      targetRotateXRef.current = START_ANGLE + (END_ANGLE - START_ANGLE) * easedProgress
+      targetOpacityRef.current = 1 - easedProgress
     }
 
-    // Function to update using requestAnimationFrame
-    const updateRotation = () => {
-      calculateRotation()
-      rafIdRef.current = null
+    const animate = () => {
+      setRotateX(prev => prev + (targetRotateXRef.current - prev) * 0.1)
+      setGradientOpacity(prev => prev + (targetOpacityRef.current - prev) * 0.1)
+      
+      requestAnimationFrame(animate)
     }
 
     const handleScroll = () => {
-      if (rafIdRef.current === null) {
-        rafIdRef.current = requestAnimationFrame(updateRotation)
-      }
+      calculateTargetValues()
     }
 
-    // Calculate initial value
-    calculateRotation()
+    calculateTargetValues()
+    const animationId = requestAnimationFrame(animate)
 
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    })
-    window.addEventListener("resize", handleScroll, {
-      passive: true,
-    })
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    window.addEventListener("resize", handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
       window.removeEventListener("resize", handleScroll)
-      if (rafIdRef.current !== null) {
-        cancelAnimationFrame(rafIdRef.current)
-      }
+      cancelAnimationFrame(animationId)
     }
   }, [])
 
-  return {
-    ref,
-    rotateX,
-    gradientOpacity,
-  }
+  return { ref, rotateX, gradientOpacity }
 }

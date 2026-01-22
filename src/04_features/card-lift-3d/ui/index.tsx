@@ -5,6 +5,7 @@ import Image from "next/image"
 import heroImage from "../../../../public/images/home/hero-card.jpg"
 import { cn } from "@/src/06_shared/lib"
 import { useCardLift3d } from "@/src/06_shared/hooks"
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants"
 
 type TProps = {
   className?: string
@@ -22,13 +23,16 @@ export const CardLift3d = ({ className }: TProps) => {
         className,
       )}
       style={{
-        transform: `perspective(1200px) rotateX(${rotateX}deg)`,
+        transform: `perspective(400px) rotateX(${rotateX}deg)`,
         transformStyle: "preserve-3d",
         transformOrigin: "bottom center",
       }}
     >
       <div
-        className="absolute t-0 l-0 w-full h-full bg-linear-to-b from-black to-transparent z-1"
+        className={cn(
+          "absolute t-0 l-0 w-full h-full bg-linear-to-b from-black to-transparent",
+          Z_INDEX_CLASSES.CARD_HERO_OVERLAY,
+        )}
         style={{ opacity: gradientOpacity }}
       />
       <Image
