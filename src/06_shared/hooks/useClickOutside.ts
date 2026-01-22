@@ -4,7 +4,7 @@ import { useOpen } from "@/src/06_shared/hooks"
 import { isServer } from "@/src/06_shared/utils"
 
 export const useClickOutside = (initialIsVisible: boolean) => {
-  const ref = useRef<HTMLElement | null>(null)
+  const ref = useRef(null)
   
   const { 
     isOpen: isShow, 
@@ -15,7 +15,7 @@ export const useClickOutside = (initialIsVisible: boolean) => {
   } = useOpen(initialIsVisible)
 
   const handleClickOutside = useCallback((event: MouseEvent) => {
-    if (ref.current && !ref.current.contains(event.target as Node)) {
+    if (ref.current && !(ref.current as HTMLElement).contains(event.target as Node)) {
       onHide()
     }
   }, [onHide])
