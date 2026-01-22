@@ -23,17 +23,18 @@ export const Logo = ({
       {isShowShortIconOnMobile && (
         <Icon
           id="logo"
-          className="md:hidden"
+          background={{
+            className: "md:hidden w-8",
+          }}
         />
       )}
 
       <Icon
         id="logoFull"
-        className={cn(
-          isShowShortIconOnMobile && "hidden md:block",
-        )}
+        background={{
+          className: cn(isShowShortIconOnMobile && "hidden md:block"),
+        }}
       />
     </ActiveLink>
   )
 }
-
