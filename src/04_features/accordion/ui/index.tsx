@@ -29,10 +29,11 @@ export const Accordion = ({ title, content }: TProps) => {
       >
         {title}
         <Icon
+          id={isOpen ? "minus" : "plus"}
+          className="w-full h-full"
           background={{
             className: "max-md:mt-1.5 w-5 h-5",
           }}
-          id={isOpen ? "minus" : "plus"}
         />
       </Title>
 
