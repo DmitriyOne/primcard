@@ -1,0 +1,17 @@
+type TProps = {
+  className?: string
+}
+
+export const IconTelegram = ({ className }: TProps) => {
+  return (
+    <svg
+      viewBox="0 0 18 18"
+      className={className}
+    >
+      <path
+        d="M14.865.043c1.354-.294 2.539.987 2.14 2.33l-3.978 13.395c-.454 1.529-2.503 1.799-3.331.429l-2.867-4.751 4.772-4.805c.324-.327.322-.855-.004-1.179s-.854-.322-1.178.004L5.656 10.26.876 7.319a1.85 1.85 0 0 1 .449-3.342L14.734.076l.131-.033z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
