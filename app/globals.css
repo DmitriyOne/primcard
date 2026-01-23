@@ -23,9 +23,16 @@
   --color-gray-medium: #191919;
   --color-gray-dark: #0D0D0D;
   --color-primary: #FF7714;
+  --color-primary-light: #C3482C;
   --color-primary-dark: #302219;
   --color-yellow: #FFD900;
   --color-red: #D92D20;
+
+  --background-image-primary-gradient: linear-gradient(
+    225deg,
+    #FF7714 24.89%,
+    #F33D39 75.64%
+  );
 
   --breakpoint-2lg: 73.75rem;
 }
