@@ -1,67 +1,68 @@
-import { TMenuItemType, type TMenuItem } from "@/src/05_entities/menu/types"
-import { anchors, external_paths } from "@/src/06_shared/constants"
+import type { TMenuItem } from "@/src/05_entities/menu/types"
+import { anchors, external_paths, TEXT } from "@/src/06_shared/constants"
+import { TButtonType } from "@/src/06_shared/types"
 
 export const HEADER_MENU_ITEMS: TMenuItem[] = [
   { 
-    type: TMenuItemType.LINK,
+    type: TButtonType.LINK,
     href: `#${anchors.how}`,
-    label: "How it works",
+    label: TEXT.HEADER.MENU[0].LABEL,
   },  
   {
-    type: TMenuItemType.LINK,
+    type: TButtonType.LINK,
     href: `#${anchors.features}`,
-    label: "Features",
+    label: TEXT.HEADER.MENU[1].LABEL,
   },
   {
-    type: TMenuItemType.LINK,
+    type: TButtonType.LINK,
     href: `#${anchors.pricing}`,
-    label: "Pricing",
+    label: TEXT.HEADER.MENU[2].LABEL,
   },
   {
-    type: TMenuItemType.LINK,
+    type: TButtonType.LINK,
     href: `#${anchors.faq}`,
-    label: "FAQ",
+    label: TEXT.HEADER.MENU[3].LABEL,
   },
   {
-    type: TMenuItemType.BUTTON_ICON,
+    type: TButtonType.BUTTON_ICON,
     href: external_paths.telegram,
-    label: "Chat with us",
+    label: TEXT.HEADER.MENU[4].LABEL,
     icon: "telegram",
     variant: "ghost",
   },
   {
-    type: TMenuItemType.BUTTON,
+    type: TButtonType.BUTTON,
     href: "/test",
-    label: "Pre-order Primcard",
+    label: TEXT.HEADER.MENU[5].LABEL,
     variant: "secondary",
   },
 ]
 
 export const FOOTER_MENU_ITEMS: TMenuItem[] = [
   { 
-    type: TMenuItemType.LINK,
+    type: TButtonType.LINK,
     href: `#${anchors.how}`,
-    label: "How it works",
+    label: TEXT.FOOTER.MENU[0].LABEL,
   },  
   {
-    type: TMenuItemType.LINK,
+    type: TButtonType.LINK,
     href: `#${anchors.features}`,
-    label: "Features",
+    label: TEXT.FOOTER.MENU[1].LABEL,
   },
   {
-    type: TMenuItemType.LINK,
+    type: TButtonType.LINK,
     href: `#${anchors.pricing}`,
-    label: "Pricing",
+    label: TEXT.FOOTER.MENU[2].LABEL,
   },
   {
-    type: TMenuItemType.LINK,
+    type: TButtonType.LINK,
     href: `#${anchors.faq}`,
-    label: "FAQ",
+    label: TEXT.FOOTER.MENU[3].LABEL,
   },
   {
-    type: TMenuItemType.BUTTON_ICON,
+    type: TButtonType.BUTTON_ICON,
     href: external_paths.telegram,
-    label: "Chat with us",
+    label: TEXT.FOOTER.MENU[4].LABEL,
     icon: "telegram",
     variant: "ghost",
   },
