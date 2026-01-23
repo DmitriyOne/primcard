@@ -1,25 +1,20 @@
+"use client"
+
 import { Burger } from "@/src/05_entities/burger/ui"
 import { HEADER_MENU_ITEMS } from "@/src/05_entities/menu/constants"
 import { Menu } from "@/src/05_entities/menu/ui"
 import { Z_INDEX_CLASSES } from "@/src/06_shared/constants"
 import { cn } from "@/src/06_shared/lib"
+import { useNavbar } from "../hooks"
 
-type TProps = {
-  isOpen: boolean
-  onToggleMenu: () => void
-  onCloseMenu: () => void
-}
+export const Navbar = () => {
+  const { isOpen, onClose, onToggle } = useNavbar()
 
-export const Navbar = ({
-  isOpen,
-  onToggleMenu,
-  onCloseMenu,
-}: TProps) => {
   return (
     <nav className="flex flex-none lg:flex-1">
       <Burger
         isOpen={isOpen}
-        onToggle={onToggleMenu}
+        onToggle={onToggle}
         className={Z_INDEX_CLASSES.HEADER_BURGER}
       />
       <Menu
@@ -44,7 +39,7 @@ export const Navbar = ({
           "nth-5:order-6 nth-6:order-5 lg:nth-5:order-5 lg:nth-6:order-6",
         )}
         linkClassName="w-full flex justify-center items-center"
-        onCloseMenu={onCloseMenu}
+        onCloseMenu={onClose}
       />
     </nav>
   )

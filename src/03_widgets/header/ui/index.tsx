@@ -1,6 +1,3 @@
-"use client"
-
-import { useNavbar } from "@/src/04_features/navbar/hooks"
 import { Navbar } from "@/src/04_features/navbar/ui"
 import { Logo } from "@/src/05_entities/logo/ui"
 import { Z_INDEX_CLASSES } from "@/src/06_shared/constants"
@@ -8,7 +5,6 @@ import { cn } from "@/src/06_shared/lib"
 import { Container } from "@/src/06_shared/ui"
 
 export const Header = () => {
-  const { isOpen, onClose, onToggle } = useNavbar()
 
   return (
     <header
@@ -31,11 +27,7 @@ export const Header = () => {
           )}
           isShowShortIconOnMobile
         />
-        <Navbar
-          isOpen={isOpen}
-          onToggleMenu={onToggle}
-          onCloseMenu={onClose}
-        />
+        <Navbar />
       </Container>
     </header>
   )
