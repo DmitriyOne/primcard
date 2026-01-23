@@ -35,7 +35,7 @@ export const Link = ({
   const linkClassName = getButtonStyles(
     variant,
     className,
-    "inline-block text-sm md:text-lg font-medium tracking-tight leading-[1.4] whitespace-pre-line",
+    "inline-block text-sm md:text-lg font-medium tracking-tight leading-[140%] whitespace-pre-line",
   )
 
   if (external) {
@@ -69,15 +69,18 @@ export const Link = ({
   )
 }
 
-type TLinkIconProps = Omit<TLinkProps, "children"> & TIconTitleProps
+type TLinkIconProps = Omit<TLinkProps, "children"> & TIconTitleProps & {
+  wrapperClassName?: string
+}
 
 export const LinkIcon = (props: TLinkIconProps) => {
-  const { icon, title, titleClassName, ...linkProps } = props
+  const { wrapperClassName, icon, title, titleClassName, ...linkProps } = props
 
   const iconTitleProps: TIconTitleProps = {
     icon,
     title,
     titleClassName,
+    className: wrapperClassName,
   }
   return (
     <Link {...linkProps}>

@@ -57,7 +57,7 @@ export const Label = ({
       }) : null}
       titleClassName={cn(
         "text-base md:text-lg",
-        "font-medium leading-[1.4]",
+        "font-medium leading-[140%]",
         titleClassName,
       )
       }

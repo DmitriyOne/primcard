@@ -17,7 +17,7 @@ export const Paragraph = ({
   return (
     <p
       className={cn(
-        "text-sm md:text-base font-normal tracking-tight leading-[1.4] whitespace-pre-line",
+        "text-sm md:text-base font-normal tracking-tight leading-[140%] whitespace-pre-line",
         variant === "primary" && "font-medium text-base md:text-lg lg:text-xl",
         variant === "secondary" && "font-medium text-sm md:text-base lg:text-lg",
         className,

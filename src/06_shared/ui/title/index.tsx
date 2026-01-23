@@ -17,7 +17,7 @@ export const Title = ({
   return (
     <Tag
       className={cn(
-        "text-lg md:text-2xl font-medium tracking-tight leading-[1.4] whitespace-pre-line",
+        "text-lg md:text-2xl font-medium tracking-tight leading-[140%] whitespace-pre-line",
         Tag === "h1" && "font-bold text-[40px] md:text-6xl lg:text-7xl",
         Tag === "h2" && "text-4xl md:text-5xl lg:text-6xl",
         Tag === "h3" && "text-4xl lg:text-5xl",

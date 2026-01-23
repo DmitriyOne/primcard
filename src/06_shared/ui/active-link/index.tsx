@@ -27,7 +27,7 @@ export const ActiveLink = ({
   const componentClassName = cn(
     "block cursor-pointer transition-all duration-300",
     "font-inter font-medium",
-    "text-lg text-dark-black tracking-tight leading-[1.4]",
+    "text-lg text-dark-black tracking-tight leading-[140%]",
     !isActive && "lg:hover:underline",
     isActive && `cursor-default ${activeClassName}`,
     className,
