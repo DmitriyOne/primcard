@@ -1,4 +1,21 @@
 export const TEXT = {
+  META: {
+    GLOBAL: {
+      TITLE: "No KYC crypto card with high cash withdrawal limits",
+      DESCRIPTION: "A privacy-first crypto card with no KYC onboarding, fast setup and daily cash withdrawals of up to $20,000. Spend crypto globally with confidence.",
+      KEYWORDS: [
+        "no kyc crypto card",
+        "crypto card",
+        "anonymous crypto card",
+        "crypto debit card",
+        "crypto cash withdrawals",
+        "high limit crypto card",
+        "crypto to cash",
+        "private crypto spending",
+        "withdraw cash with crypto",
+      ],
+    },
+  },
   HEADER: {
     MENU: [
       { LABEL: "How it works" },

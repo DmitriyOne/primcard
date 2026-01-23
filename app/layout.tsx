@@ -4,6 +4,7 @@ import { Plus_Jakarta_Sans } from "next/font/google"
 
 import { Layout } from "@/src/01_app/layout"
 import { FullScreen } from "@/src/06_shared/ui"
+import { TEXT } from "@/src/06_shared/constants/text"
 
 import "./globals.css"
 
@@ -16,8 +17,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 type TProps = Readonly<PropsWithChildren>
 
 export const metadata: Metadata = {
-  title: "Primcard",
-  description: "Crypto to fiat off-ramp without KYC. High limits.",
+  title: TEXT.META.GLOBAL.TITLE,
+  description: TEXT.META.GLOBAL.DESCRIPTION,
+  keywords: [...TEXT.META.GLOBAL.KEYWORDS],
   appleWebApp: {
     title: "Primcard",
   },
