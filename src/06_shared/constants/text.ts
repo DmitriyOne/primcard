@@ -25,6 +25,24 @@ export const TEXT = {
       DESCRIPTION: "Withdraw cash and spend globally with a physical card",
       BUTTON_TEXT: "Pre-order Primcard",
     },
+    USAGE: {
+      TITLE: "Built for serious usage",
+      DESCRIPTION: "Primcard is not designed as a demo product or a low-limit card.",
+      CARDS: [
+        {
+          TITLE: "Need predictable access to fiat",
+          DESCRIPTION: "Funds are available on demand, without delays or uncertainty.",
+        },
+        {
+          TITLE: "Operate with larger balances",
+          DESCRIPTION: "Supports higher balances by default, not as an exception.",
+        },
+        {
+          TITLE: "Off-ramp crypto regularly",
+          DESCRIPTION: "Designed for frequent, routine crypto-to-fiat conversions.",
+        },
+      ],
+    },
     FAQ: {
       TITLE: "Frequently asked questions",
       QUESTIONS: [
