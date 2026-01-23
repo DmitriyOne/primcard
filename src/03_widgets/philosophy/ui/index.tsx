@@ -7,13 +7,14 @@ import { PhilosophyTags } from "./tags"
 export const Philosophy = () => {
 
   return (
-    <Section className="py-16 lg:py-24">
+    <Section className="px-0 py-16 lg:py-24">
       <Container className="text-center">
         <div
           className={cn(
             "w-full max-w-[960px]",
             "mx-auto",
             "mb-15 md:mb-20 lg:mb-28",
+            "px-6",
           )}
         >
           <Title

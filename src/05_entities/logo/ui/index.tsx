@@ -31,6 +31,7 @@ export const Logo = ({
 
       <Icon
         id="logoFull"
+        className="w-full h-full"
         background={{
           className: cn(isShowShortIconOnMobile && "hidden md:block"),
         }}
