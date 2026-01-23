@@ -52,3 +52,22 @@ body {
   color: var(--foreground);
   font-family: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
 }
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+[data-infinite-scroll] {
+  animation: infinite-scroll var(--scroll-duration, 5s) linear infinite;
+}
+
+@media (min-width: 1024px) {
+  [data-infinite-scroll] {
+    animation: none;
+  }
+}

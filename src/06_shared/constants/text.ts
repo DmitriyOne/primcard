@@ -43,6 +43,16 @@ export const TEXT = {
         },
       ],
     },
+    PHILOSOPHY: {
+      TITLE: "Primcard is a premium physical card created for reliability and calm daily use. No virtual gimmicks. No unnecessary features. Just a solid tool for converting crypto into usable money.",
+      TAGS: [
+        { LABEL: "Physical card delivery" },
+        { LABEL: "Crypto-funded fiat balance" },
+        { LABEL: "ATM withdrawals" },
+        { LABEL: "Card payments worldwide" },
+        { LABEL: "Dashboard access for balance and activity" },
+      ],
+    },
     FAQ: {
       TITLE: "Frequently asked questions",
       QUESTIONS: [
