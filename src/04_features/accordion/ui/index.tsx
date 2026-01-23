@@ -37,13 +37,17 @@ export const Accordion = ({ title, content }: TProps) => {
         />
       </Title>
 
-      {isOpen && (
-        <div className="mt-4 md:mt-5">
-          <Paragraph className="text-left text-gray-light">
-            {content}
-          </Paragraph>
-        </div>
-      )}
+      <div
+        className={cn(
+          "hidden",
+          "mt-4 md:mt-5",
+          isOpen && "block",
+        )}
+      >
+        <Paragraph className="text-left text-gray-light">
+          {content}
+        </Paragraph>
+      </div>
     </div>
   )
 }
