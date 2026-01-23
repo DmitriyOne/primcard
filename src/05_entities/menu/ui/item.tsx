@@ -1,8 +1,8 @@
 "use client"
 
 import type { TMenuItem } from "@/src/05_entities/menu/types"
-import { TMenuItemType } from "@/src/05_entities/menu/types"
 import { cn } from "@/src/06_shared/lib"
+import { TButtonType } from "@/src/06_shared/types"
 import { ActiveLink, Button, LinkIcon } from "@/src/06_shared/ui"
 import { useCallback } from "react"
 
@@ -20,9 +20,9 @@ type TItemProps = Omit<TProps, "className"> & {
 }
 
 const MenuItemButtonIcon = ({ item, linkClassName, linkTitleClassName, onClick }: TItemProps) => {
-  if (item.type !== TMenuItemType.BUTTON_ICON) return null
+  if (item.type !== TButtonType.BUTTON_ICON) return null
 
-  const buttonIconItem = item as Extract<TMenuItem, { type: typeof TMenuItemType.BUTTON_ICON }>
+  const buttonIconItem = item as Extract<TMenuItem, { type: typeof TButtonType.BUTTON_ICON }>
 
   return (
     <LinkIcon
@@ -39,9 +39,9 @@ const MenuItemButtonIcon = ({ item, linkClassName, linkTitleClassName, onClick }
 }
 
 const MenuItemButton = ({ item, linkClassName, onClick }: TItemProps) => {
-  if (item.type !== TMenuItemType.BUTTON) return null
+  if (item.type !== TButtonType.BUTTON) return null
 
-  const buttonItem = item as Extract<TMenuItem, { type: typeof TMenuItemType.BUTTON }>
+  const buttonItem = item as Extract<TMenuItem, { type: typeof TButtonType.BUTTON }>
 
   // TODO: change to my link and add href
   // TODO: add titleClassName={linkTitleClassName}
@@ -58,7 +58,7 @@ const MenuItemButton = ({ item, linkClassName, onClick }: TItemProps) => {
 }
 
 const MenuItemLink = ({ item, linkClassName, onClick }: TItemProps) => {
-  if (item.type !== TMenuItemType.LINK) return null
+  if (item.type !== TButtonType.LINK) return null
 
   return (
     <ActiveLink
@@ -72,9 +72,9 @@ const MenuItemLink = ({ item, linkClassName, onClick }: TItemProps) => {
 }
 
 const MENU_ITEM = {
-  [TMenuItemType.BUTTON_ICON]: MenuItemButtonIcon,
-  [TMenuItemType.BUTTON]: MenuItemButton,
-  [TMenuItemType.LINK]: MenuItemLink,
+  [TButtonType.BUTTON_ICON]: MenuItemButtonIcon,
+  [TButtonType.BUTTON]: MenuItemButton,
+  [TButtonType.LINK]: MenuItemLink,
 } as const
 
 export const MenuItem = ({

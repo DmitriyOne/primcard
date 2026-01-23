@@ -1,16 +1,8 @@
-import { TIconId } from "@/src/06_shared/types"
+import { TButtonType, TIconId } from "@/src/06_shared/types"
 import { TButtonVariant } from "@/src/06_shared/ui/button/variants"
 
-export const TMenuItemType = {
-  LINK: "link",
-  BUTTON: "button",
-  BUTTON_ICON: "button-icon",
-} as const
-
-export type TMenuItemType = (typeof TMenuItemType)[keyof typeof TMenuItemType]
-
 type TMenuItemBase = {
-  type: TMenuItemType
+  type: TButtonType
   href: string
   label: string
 }
