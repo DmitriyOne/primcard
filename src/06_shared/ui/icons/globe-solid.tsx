@@ -7,6 +7,7 @@ export const IconGlobeSolid = ({ className }: TProps) => {
   return (
     <svg
       viewBox="0 0 22 22"
+      fill="none"
       className={className}
     >
       <path

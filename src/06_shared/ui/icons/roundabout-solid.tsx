@@ -8,6 +8,7 @@ export const IconRoundaboutSolid = ({ className }: TProps) => {
   return (
     <svg
       viewBox="0 0 29 27"
+      fill="none"
       className={className}
     >
       <path

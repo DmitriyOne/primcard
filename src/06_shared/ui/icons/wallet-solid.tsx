@@ -7,6 +7,7 @@ export const IconWalletSolid = ({ className }: TProps) => {
   return (
     <svg
       viewBox="0 0 22 18"
+      fill="none"
       className={className}
     >
       <path

@@ -7,6 +7,7 @@ export const IconBarLineChartSolid = ({ className }: TProps) => {
   return (
     <svg
       viewBox="0 0 21 19"
+      fill="none"
       className={className}
     >
       <path
