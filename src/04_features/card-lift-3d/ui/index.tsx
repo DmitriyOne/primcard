@@ -2,10 +2,11 @@
 
 import Image from "next/image"
 
-import heroImage from "../../../../public/images/home/hero-card.jpg"
 import { cn } from "@/src/06_shared/lib"
 import { useCardLift3d } from "@/src/06_shared/hooks"
 import { Z_INDEX_CLASSES } from "@/src/06_shared/constants"
+
+import primcardImage from "../../../../public/images/primcard.jpg"
 
 type TProps = {
   className?: string
@@ -36,7 +37,7 @@ export const CardLift3d = ({ className }: TProps) => {
         style={{ opacity: gradientOpacity }}
       />
       <Image
-        src={heroImage}
+        src={primcardImage}
         alt="Hero card"
         className="w-full h-full object-cover"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
