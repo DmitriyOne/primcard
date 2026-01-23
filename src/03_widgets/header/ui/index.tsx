@@ -22,10 +22,11 @@ export const Header = () => {
         )}>
         <Logo
           className={cn(
-            "max-md:w-8 lg:mt-[-6px] relative",
+            "relative",
+            "w-[130px] h-[26px]",
+            "lg:mb-[6px]",
             Z_INDEX_CLASSES.HEADER_LOGO,
           )}
-          isShowShortIconOnMobile
         />
         <Navbar />
       </Container>
