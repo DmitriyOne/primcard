@@ -20,6 +20,10 @@ import { IconRoundaboutSolid } from "@/src/06_shared/ui/icons/roundabout-solid"
 import { IconTelegram } from "@/src/06_shared/ui/icons/telegram"
 import { IconUsd } from "@/src/06_shared/ui/icons/usd"
 import { IconWalletSolid } from "@/src/06_shared/ui/icons/wallet-solid"
+import { IconCapabilityUsdtCoin } from "@/src/06_shared/ui/icons/capability-usdt-coin"
+import { IconCapabilityEuroCoin } from "@/src/06_shared/ui/icons/capability-euro-coin"
+import { IconCapabilityArrowThroughCoins } from "@/src/06_shared/ui/icons/capability-arrow-through-coins"
+import { IconCapabilityPrivacy } from "@/src/06_shared/ui/icons/capability-privacy"
 
 export const ICONS = {
   logo: IconLogo,
@@ -43,4 +47,8 @@ export const ICONS = {
   usd: IconUsd,
   btc: IconBtc,
   eth: IconEth,
+  capabilityUsdtCoin: IconCapabilityUsdtCoin,
+  capabilityEuroCoin: IconCapabilityEuroCoin,
+  capabilityArrowThroughCoins: IconCapabilityArrowThroughCoins,
+  capabilityPrivacy: IconCapabilityPrivacy,
 } as const satisfies Record<string, ComponentType>
