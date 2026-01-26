@@ -23,7 +23,7 @@ export const Title = ({
         Tag === "h3" && "text-4xl md:text-[36px] lg:text-5xl",
         Tag === "h4" && "font-normal text-xl md:text-3xl lg:text-4xl",
         Tag === "h5" && "font-normal text-lg md:text-2xl lg:text-3xl",
-        Tag === "h6" && "text-base md:text-lg lg:text-2xl",
+        Tag === "h6" && "text-xl lg:text-2xl",
         "leading-[140%]",
         className,
       )}
