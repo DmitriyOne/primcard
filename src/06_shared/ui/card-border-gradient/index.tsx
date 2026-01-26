@@ -7,7 +7,7 @@ type TProps = PropsWithChildren & {
   bodyClassName?: string
 }
 
-export const GradientCard = ({
+export const CardBorderGradient = ({
   className,
   bodyClassName,
   children,
