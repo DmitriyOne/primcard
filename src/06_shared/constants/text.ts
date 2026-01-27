@@ -60,6 +60,31 @@ export const TEXT = {
         },
       ],
     },
+    CAPABILITIES: {
+      TITLE: "What you can do with Primcard",
+      CARDS: [
+        {
+          TITLE: "Off-ramp crypto into fiat",
+          DESCRIPTION: "Move from digital assets to spendable money without routing through traditional bank accounts",
+        },
+        {
+          TITLE: "Withdraw meaningful amounts",
+          DESCRIPTION: "Designed to support higher usage volumes, not just small everyday payments",
+        },
+        {
+          TITLE: "Access cash when needed",
+          DESCRIPTION: "Withdraw fiat from ATMs where cards are accepted",
+        },
+        {
+          TITLE: "Minimal friction to get started",
+          DESCRIPTION: "A lightweight onboarding approach that avoids unnecessary identity procedures at entry level",
+        },
+        {
+          TITLE: "Built for discretion",
+          DESCRIPTION: "Primcard follows a privacy-first philosophy and collects only what is required to operate reliably",
+        },
+      ],
+    },
     PHILOSOPHY: {
       TITLE: "Primcard is a premium physical card created for reliability and calm daily use. No virtual gimmicks. No unnecessary features. Just a solid tool for converting crypto into usable money.",
       TAGS: [

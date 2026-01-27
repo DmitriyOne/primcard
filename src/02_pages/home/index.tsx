@@ -5,12 +5,14 @@ import { Cta } from "@/src/03_widgets/cta/ui"
 import { HomeHero } from "@/src/03_widgets/home-hero/ui"
 import { Usage } from "@/src/03_widgets/usage/ui"
 import { Philosophy } from "@/src/03_widgets/philosophy/ui"
+import { Capabilities } from "@/src/03_widgets/сapabilities/ui"
 
 export const HomePage = () => {
 
   return (
     <>
       <HomeHero />
+      <Capabilities />
       <Usage />
       <Philosophy />
       <Faq
