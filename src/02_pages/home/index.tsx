@@ -6,6 +6,7 @@ import { HomeHero } from "@/src/03_widgets/home-hero/ui"
 import { Usage } from "@/src/03_widgets/usage/ui"
 import { Philosophy } from "@/src/03_widgets/philosophy/ui"
 import { Capabilities } from "@/src/03_widgets/сapabilities/ui"
+import { Journey } from "@/src/03_widgets/journey/ui"
 
 export const HomePage = () => {
 
@@ -13,6 +14,7 @@ export const HomePage = () => {
     <>
       <HomeHero />
       <Capabilities />
+      <Journey />
       <Usage />
       <Philosophy />
       <Faq

@@ -85,6 +85,31 @@ export const TEXT = {
         },
       ],
     },
+    JOURNEY: {
+      TITLE: "Simple from start to spend",
+      STEPS: [
+        {
+          TITLE: "Pre-order Primcard",
+          DESCRIPTION: "Reserve your physical card and secure priority access",
+        },
+        {
+          TITLE: "Card delivery",
+          DESCRIPTION: "Your Primcard is shipped to your chosen address. Delivery times vary by country, typically up to 14 days",
+        },
+        {
+          TITLE: "Activate your card",
+          DESCRIPTION: "Activate Primcard once received to unlock functionality",
+        },
+        {
+          TITLE: "Top up with crypto",
+          DESCRIPTION: "Fund your card using supported digital assets. Conversion into fiat happens seamlessly",
+        },
+        {
+          TITLE: "Spend or withdraw",
+          DESCRIPTION: "Use your balance for card payments or withdraw cash from ATMs",
+        },
+      ],
+    },
     PHILOSOPHY: {
       TITLE: "Primcard is a premium physical card created for reliability and calm daily use. No virtual gimmicks. No unnecessary features. Just a solid tool for converting crypto into usable money.",
       TAGS: [
