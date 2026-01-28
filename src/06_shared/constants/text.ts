@@ -216,4 +216,11 @@ export const TEXT = {
     DESCRIPTION: "You can continue from the homepage.",
     BUTTON_TEXT: "Go to homepage",
   },
+  GLOBAL_ERROR: {
+    BACK_TITLE: "Oops!",
+    TITLE: "Something went wrong",
+    DESCRIPTION: "We encountered an unexpected error. Please try again or contact support if the problem persists.",
+    BUTTON_RELOAD_PAGE: "Reload Page",
+    BUTTON_GO_HOME: "Go Home",
+  },
 } as const
