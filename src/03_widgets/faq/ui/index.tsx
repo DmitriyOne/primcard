@@ -1,16 +1,15 @@
 import { Container, Section, Title } from "@/src/06_shared/ui"
 import { cn } from "@/src/06_shared/lib"
-import { TAccordionItem } from "@/src/04_features/accordion/types"
 import { Accordion } from "@/src/04_features/accordion/ui"
+import { TId } from "@/src/06_shared/types/id"
+import { FAQ_CONTENT } from "../constants"
 
-type TProps = {
-  title: string
-  questions: TAccordionItem[]
-}
+type TProps = TId
 
-export const Faq = ({ title, questions }: TProps) => {
+export const Faq = ({ id }: TProps) => {
   return (
     <Section
+      id={id}
       className={cn(
         "py-16 md:py-20 lg:py-24",
       )}
@@ -20,11 +19,11 @@ export const Faq = ({ title, questions }: TProps) => {
           as="h3"
           className="mb-10 md:mb-14 lg:mb-20"
         >
-          {title}
+          {FAQ_CONTENT.TITLE}
         </Title>
 
         <div className="flex flex-col gap-y-5">
-          {questions.map((item) => (
+          {FAQ_CONTENT.QUESTIONS.map((item) => (
             <Accordion
               key={item.title}
               title={item.title}
