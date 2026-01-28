@@ -15,6 +15,9 @@ export const TEXT = {
         "withdraw cash with crypto",
       ],
     },
+    NOT_FOUND: {
+      TITLE: "Page not found",
+    },
   },
   HEADER: {
     MENU: [
@@ -206,5 +209,11 @@ export const TEXT = {
         },
       ],
     },
+  },
+  NOT_FOUND: {
+    BACK_TITLE: "404",
+    TITLE: "This page isn’t available",
+    DESCRIPTION: "You can continue from the homepage.",
+    BUTTON_TEXT: "Go to homepage",
   },
 } as const
