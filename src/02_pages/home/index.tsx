@@ -1,5 +1,5 @@
 import { Faq } from "@/src/03_widgets/faq/ui"
-import { TEXT } from "@/src/06_shared/constants"
+import { anchors } from "@/src/06_shared/constants"
 
 import { Cta } from "@/src/03_widgets/cta/ui"
 import { HomeHero } from "@/src/03_widgets/home-hero/ui"
@@ -16,18 +16,12 @@ export const HomePage = () => {
     <>
       <HomeHero />
       <HomeOverview />
-      <Capabilities />
-      <Journey />
+      <Capabilities id={anchors.features} />
+      <Journey id={anchors.how} />
       <Usage />
       <Philosophy />
-      <Plans />
-      <Faq
-        title={TEXT.HOME.FAQ.TITLE}
-        questions={TEXT.HOME.FAQ.QUESTIONS.map((item) => ({
-          title: item.TITLE,
-          content: item.CONTENT,
-        }))}
-      />
+      <Plans id={anchors.plans} />
+      <Faq id={anchors.faq} />
       <Cta />
     </>
   )

@@ -3,10 +3,16 @@ import { Paragraph, Section } from "@/src/06_shared/ui"
 import { Container } from "@/src/06_shared/ui"
 import { Title } from "@/src/06_shared/ui"
 import { Cards } from "./cards"
+import { TId } from "@/src/06_shared/types/id"
 
-export const Plans = () => {
+type TProps = TId
+
+export const Plans = ({ id }: TProps) => {
   return (
-    <Section className="py-16 lg:py-24">
+    <Section
+      id={id}
+      className="py-16 lg:py-24"
+    >
       <Container className="text-center">
         <Title
           as='h3'

@@ -1,12 +1,18 @@
 import { TEXT } from "@/src/06_shared/constants"
+import { TId } from "@/src/06_shared/types/id"
 import { cn } from "@/src/06_shared/lib"
 import { Container, Section, Title } from "@/src/06_shared/ui"
 import { CARDS } from "../constants"
 import { CapabilityCardItem } from "./card-item"
 
-export const Capabilities = () => {
+type TProps = TId
+
+export const Capabilities = ({ id }: TProps) => {
   return (
-    <Section className="py-16 lg:py-24">
+    <Section
+      id={id}
+      className="py-16 lg:py-24"
+    >
       <Container className="text-center">
         <Title
           as='h3'
