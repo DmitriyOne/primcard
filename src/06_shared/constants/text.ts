@@ -42,6 +42,19 @@ export const TEXT = {
       DESCRIPTION: "Withdraw cash and spend globally with a physical card",
       BUTTON_TEXT: "Pre-order Primcard",
     },
+    OVERVIEW: {
+      TITLE: "Primcard is a premium physical card designed for seamless crypto off-ramping",
+      DESCRIPTION: "Convert digital assets into usable fiat, withdraw cash, and spend globally, without unnecessary barriers",
+      MAP: {
+        TITLE: "Global use",
+      },
+      LABELS: [
+        { TITLE: "Exchange" },
+        { TITLE: "Payout" },
+        { TITLE: "Withdraw" },
+        { TITLE: "Physical card" },
+      ],
+    },
     USAGE: {
       TITLE: "Built for serious usage",
       DESCRIPTION: "Primcard is not designed as a demo product or a low-limit card.",

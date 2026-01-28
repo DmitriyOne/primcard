@@ -7,12 +7,14 @@ import { Usage } from "@/src/03_widgets/usage/ui"
 import { Philosophy } from "@/src/03_widgets/philosophy/ui"
 import { Capabilities } from "@/src/03_widgets/сapabilities/ui"
 import { Journey } from "@/src/03_widgets/journey/ui"
+import { HomeOverview } from "@/src/03_widgets/home-overview/ui"
 
 export const HomePage = () => {
 
   return (
     <>
       <HomeHero />
+      <HomeOverview />
       <Capabilities />
       <Journey />
       <Usage />

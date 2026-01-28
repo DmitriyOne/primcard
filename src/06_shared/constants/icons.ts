@@ -25,6 +25,7 @@ import { IconCapabilityEuroCoin } from "@/src/06_shared/ui/icons/capability-euro
 import { IconCapabilityArrowThroughCoins } from "@/src/06_shared/ui/icons/capability-arrow-through-coins"
 import { IconCapabilityPrivacy } from "@/src/06_shared/ui/icons/capability-privacy"
 import { IconJourneyStepsStraightSolid, IconJourneyStepsCurvedSolid } from "@/src/06_shared/ui/icons/journey-steps-solid"
+import { IconDashLineFromBangladeshToCanada, IconDashLineFromBangladeshToChina } from "@/src/06_shared/ui/icons/dash-line-from-to-flag"
 
 export const ICONS = {
   logo: IconLogo,
@@ -54,4 +55,6 @@ export const ICONS = {
   capabilityPrivacy: IconCapabilityPrivacy,
   journeyStepsStraightSolid: IconJourneyStepsStraightSolid,
   journeyStepsCurvedSolid: IconJourneyStepsCurvedSolid,
+  dashLineFromBangladeshToCanada: IconDashLineFromBangladeshToCanada,
+  dashLineFromBangladeshToChina: IconDashLineFromBangladeshToChina,
 } as const satisfies Record<string, ComponentType>
