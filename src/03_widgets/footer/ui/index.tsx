@@ -15,15 +15,19 @@ export const Footer = () => {
             "relative",
             "w-full",
             "max-md:items-start",
-            "md:flex-row md:items-center",
+            "flex-row flex-wrap md:items-center",
           )}
           itemClassName={cn(
             "md:mb-0 md:mr-8",
             "md:nth-5:ml-auto",
             "max-md:nth-4:mb-0",
-            "max-md:nth-5:absolute max-md:nth-5:bottom-[-12px] max-md:nth-5:right-0",
+            "flex-[1_1_50%] md:flex-[0_0_auto]",
+            "text-left",
+            "nth-5:flex-1 nth-5:text-center md:nth-5:flex-[0_0_auto]",
+            "max-md:[&:nth-child(5)>a]:flex max-md:[&:nth-child(5)>a]:justify-center",
+            "max-md:[&:nth-child(5)>a]:w-full",
           )}
-          linkClassName="text-sm md:text-lg"
+          linkClassName="text-sm md:text-lg w-max"
           linkTitleClassName="text-sm md:text-base"
           items={FOOTER_MENU_ITEMS}
         />
