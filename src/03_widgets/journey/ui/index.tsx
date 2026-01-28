@@ -33,7 +33,7 @@ export const Journey = () => {
             className={cn(
               "relative",
               "max-w-68 md:max-w-[450px] xl:max-w-[610px]",
-              "pb-0 lg:pb-24 xl:pb-14",
+              "pb-0 lg:pb-18 xl:pb-14",
               "flex justify-center items-center",
             )}
           >

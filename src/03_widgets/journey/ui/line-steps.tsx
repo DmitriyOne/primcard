@@ -9,9 +9,9 @@ export const JourneyLineStepsDesktop = () => {
         className: cn(
           "hidden lg:flex",
           "w-full",
-          "h-[485px]",
+          "h-[360px] xl:h-[485px]",
           "absolute",
-          "bottom-0",
+          "bottom-[35px] xl:bottom-0",
           "left-1/2",
           "-translate-x-1/2",
         ),

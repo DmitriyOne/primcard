@@ -48,3 +48,33 @@ export const JOURNEY_STEP_KEYS = {
 } as const
 
 export const JOURNEY_ACTIVE_STEPS: TJourneyStepKey[] = ["1", "2", "3"]
+
+export const JOURNEY_TEXT_ALIGN_CLASSES: Record<TJourneyTextStepItem["align"], string> = {
+  left: "lg:text-left",
+  center: "lg:text-center",
+  right: "lg:text-right",
+} as const
+
+export const JOURNEY_TEXT_STEP_POSITIONS: Record<TJourneyTextStepItem["step"], string[]> = {
+  [JOURNEY_STEP_KEYS[1]]: [
+    "lg:bottom-[410px] xl:bottom-[540px]",
+    "xl:left-[40px]",
+  ],
+  [JOURNEY_STEP_KEYS[2]]: [
+    "lg:bottom-[155px] xl:bottom-[235px]",
+    "xl:left-[40px]",
+  ],
+  [JOURNEY_STEP_KEYS[3]]: [
+    "bottom-0",
+    "lg:left-1/2",
+    "lg:-translate-x-1/2",
+  ],
+  [JOURNEY_STEP_KEYS[4]]: [
+    "lg:bottom-[392px] xl:bottom-[535px]",
+    "lg:right-0 xl:right-[40px]",
+  ],
+  [JOURNEY_STEP_KEYS[5]]: [
+    "lg:bottom-[176px] xl:bottom-[234px]",
+    "lg:right-0 xl:right-[40px]",
+  ],
+} as const

@@ -35,7 +35,7 @@ export const JourneyCoins = () => {
             "py-3.5 xl:py-5",
             "bg-[#444] drop-shadow-[0_0_10px_rgba(255,255,255,0.35)]",
             "absolute",
-            "bottom-[20px] lg:bottom-[85px] xl:bottom-[50px]",
+            "bottom-[20px] lg:bottom-[55px] xl:bottom-[50px]",
             "right-[5px] lg:right-[70px]",
             Z_INDEX_CLASSES.JOURNEY_COINS,
           ),

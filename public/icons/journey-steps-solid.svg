@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="13" height="547" fill="none" xmlns:v="https://vecta.io/nano"><circle cx="6.877" cy="5.639" r="4" transform="rotate(252.612 6.877 5.639)" fill="#050100" stroke="#fff"/><g stroke="#5c5c5c"><path d="M6.5 283.001v260"/><circle cx="5.639" cy="540.641" r="4" transform="rotate(252.612 5.639 540.641)" fill="#050100"/></g><g stroke="#fff"><path stroke-dasharray="6 6" d="M6.5 9.001v269"/><g fill="#050100"><circle cx="6.606" cy="277.494" r="4" transform="rotate(252.612 6.606 277.494)"/><circle cx="6.877" cy="129.64" r="4" transform="rotate(252.612 6.877 129.64)"/></g></g></svg>
+<svg width="13" height="546" viewBox="0 0 13 546" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="6.63905" cy="5.63918" r="4" transform="rotate(-107.388 6.63905 5.63918)" stroke="white"/>
+<line x1="6.26196" y1="283.001" x2="6.26195" y2="543.001" stroke="#5C5C5C"/>
+<circle cx="5.63918" cy="398.639" r="4" transform="rotate(-107.388 5.63918 398.639)" fill="#050100" stroke="#5C5C5C"/>
+<circle cx="6.40102" cy="539.64" r="4" transform="rotate(-107.388 6.40102 539.64)" fill="#050100" stroke="#5C5C5C"/>
+<line x1="6.26184" y1="9.00098" x2="6.26183" y2="278.001" stroke="white" stroke-dasharray="6 6"/>
+<circle cx="6.36781" cy="277.494" r="4" transform="rotate(-107.388 6.36781 277.494)" fill="#050100" stroke="white"/>
+<circle cx="6.6393" cy="129.64" r="4" transform="rotate(-107.388 6.6393 129.64)" fill="black" stroke="white"/>
+</svg>
