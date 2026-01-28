@@ -133,6 +133,42 @@ export const TEXT = {
         { LABEL: "Dashboard access for balance and activity" },
       ],
     },
+    PLANS: {
+      TITLE: "Clear today. Flexible tomorrow.",
+      NOTE: "Pricing and plans may evolve as Primcard expands. Final fees are always shown before confirmation",
+      CARDS: [
+        {
+          LABEL: "PRE-ORDER",
+          TITLE: "Lock in early pricing",
+          DESCRIPTION: "Reserve your Primcard before launch and secure discounted fees",
+          PRICE: {
+            AMOUNT: 600,
+            CURRENCY: "USDT",
+            FREQUENCY: "one-time card fee",
+          },
+          FEATURES: [
+            "Monthly subscription 49 USDT",
+            "Top up fee on the card 5%",
+          ],
+          BUTTON: "Pre-order Primcard",
+        },
+        {
+          LABEL: "from March 1",
+          TITLE: "Standard pricing",
+          DESCRIPTION: "Available after release. Higher fees apply once pre-orders close",
+          PRICE: {
+            AMOUNT: 995,
+            CURRENCY: "USDT",
+            FREQUENCY: "one-time card fee",
+          },
+          FEATURES: [
+            "Monthly subscription 99 USDT",
+            "Top up fee on the card 5%",
+          ],
+          BUTTON: "Order Primcard",
+        },
+      ],
+    },
     FAQ: {
       TITLE: "Frequently asked questions",
       QUESTIONS: [

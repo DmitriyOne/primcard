@@ -8,6 +8,7 @@ import { Philosophy } from "@/src/03_widgets/philosophy/ui"
 import { Capabilities } from "@/src/03_widgets/сapabilities/ui"
 import { Journey } from "@/src/03_widgets/journey/ui"
 import { HomeOverview } from "@/src/03_widgets/home-overview/ui"
+import { Plans } from "@/src/03_widgets/plans/ui"
 
 export const HomePage = () => {
 
@@ -19,6 +20,7 @@ export const HomePage = () => {
       <Journey />
       <Usage />
       <Philosophy />
+      <Plans />
       <Faq
         title={TEXT.HOME.FAQ.TITLE}
         questions={TEXT.HOME.FAQ.QUESTIONS.map((item) => ({
