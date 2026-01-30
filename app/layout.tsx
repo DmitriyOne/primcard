@@ -5,6 +5,7 @@ import { Plus_Jakarta_Sans } from "next/font/google"
 import { Layout } from "@/src/01_app/layout"
 import { FullScreen } from "@/src/06_shared/ui"
 import { TEXT } from "@/src/06_shared/constants/text"
+import { env_client } from "@/src/06_shared/libs/env/client"
 
 import "./globals.css"
 
@@ -17,9 +18,23 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 type TProps = Readonly<PropsWithChildren>
 
 export const metadata: Metadata = {
-  title: TEXT.META.GLOBAL.TITLE,
+  metadataBase: new URL(env_client.NEXT_PUBLIC_APP_URL),
+  title: {
+    template: "%s | Primcard",
+    default: TEXT.META.GLOBAL.TITLE,
+  },
   description: TEXT.META.GLOBAL.DESCRIPTION,
   keywords: [...TEXT.META.GLOBAL.KEYWORDS],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   appleWebApp: {
     title: "Primcard",
   },

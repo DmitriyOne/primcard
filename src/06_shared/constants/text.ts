@@ -15,6 +15,26 @@ export const TEXT = {
         "withdraw cash with crypto",
       ],
     },
+    HOME: {
+      TITLE: "No KYC crypto card with high cash withdrawal limits",
+      DESCRIPTION: "A privacy-first crypto card with no KYC onboarding, fast setup and daily cash withdrawals of up to $20,000. Spend crypto globally with confidence.",
+      OPEN_GRAPH: {
+        SITE_NAME: "Primcard",
+        TITLE: "Primcard – a privacy-first crypto card with high cash limits",
+        DESCRIPTION: "No KYC onboarding, fast setup and daily cash withdrawals of up to $20,000. A next-generation crypto card for private global spending.",
+        TYPE: "website",
+        LOCALE: "en_GB",
+        IMAGE: "/images/og-image.jpg",
+      },
+      TWITTER: {
+        TITLE: "Primcard – a privacy-first crypto card",
+        DESCRIPTION: "A privacy-first crypto card with no KYC onboarding and high daily cash withdrawals.",
+        IMAGES: ["/images/og-image.jpg"],
+      },
+    },
+    NOT_FOUND: {
+      TITLE: "Page not found",
+    },
   },
   HEADER: {
     MENU: [
@@ -42,6 +62,19 @@ export const TEXT = {
       DESCRIPTION: "Withdraw cash and spend globally with a physical card",
       BUTTON_TEXT: "Pre-order Primcard",
     },
+    OVERVIEW: {
+      TITLE: "Primcard is a premium physical card designed for seamless crypto off-ramping",
+      DESCRIPTION: "Convert digital assets into usable fiat, withdraw cash, and spend globally, without unnecessary barriers",
+      MAP: {
+        TITLE: "Global use",
+      },
+      LABELS: [
+        { TITLE: "Exchange" },
+        { TITLE: "Payout" },
+        { TITLE: "Withdraw" },
+        { TITLE: "Physical card" },
+      ],
+    },
     USAGE: {
       TITLE: "Built for serious usage",
       DESCRIPTION: "Primcard is not designed as a demo product or a low-limit card.",
@@ -60,6 +93,56 @@ export const TEXT = {
         },
       ],
     },
+    CAPABILITIES: {
+      TITLE: "What you can do with Primcard",
+      CARDS: [
+        {
+          TITLE: "Off-ramp crypto into fiat",
+          DESCRIPTION: "Move from digital assets to spendable money without routing through traditional bank accounts",
+        },
+        {
+          TITLE: "Withdraw meaningful amounts",
+          DESCRIPTION: "Designed to support higher usage volumes, not just small everyday payments",
+        },
+        {
+          TITLE: "Access cash when needed",
+          DESCRIPTION: "Withdraw fiat from ATMs where cards are accepted",
+        },
+        {
+          TITLE: "Minimal friction to get started",
+          DESCRIPTION: "A lightweight onboarding approach that avoids unnecessary identity procedures at entry level",
+        },
+        {
+          TITLE: "Built for discretion",
+          DESCRIPTION: "Primcard follows a privacy-first philosophy and collects only what is required to operate reliably",
+        },
+      ],
+    },
+    JOURNEY: {
+      TITLE: "Simple from start to spend",
+      STEPS: [
+        {
+          TITLE: "Pre-order Primcard",
+          DESCRIPTION: "Reserve your physical card and secure priority access",
+        },
+        {
+          TITLE: "Card delivery",
+          DESCRIPTION: "Your Primcard is shipped to your chosen address. Delivery times vary by country, typically up to 14 days",
+        },
+        {
+          TITLE: "Activate your card",
+          DESCRIPTION: "Activate Primcard once received to unlock functionality",
+        },
+        {
+          TITLE: "Top up with crypto",
+          DESCRIPTION: "Fund your card using supported digital assets. Conversion into fiat happens seamlessly",
+        },
+        {
+          TITLE: "Spend or withdraw",
+          DESCRIPTION: "Use your balance for card payments or withdraw cash from ATMs",
+        },
+      ],
+    },
     PHILOSOPHY: {
       TITLE: "Primcard is a premium physical card created for reliability and calm daily use. No virtual gimmicks. No unnecessary features. Just a solid tool for converting crypto into usable money.",
       TAGS: [
@@ -68,6 +151,42 @@ export const TEXT = {
         { LABEL: "ATM withdrawals" },
         { LABEL: "Card payments worldwide" },
         { LABEL: "Dashboard access for balance and activity" },
+      ],
+    },
+    PLANS: {
+      TITLE: "Clear today. Flexible tomorrow.",
+      NOTE: "Pricing and plans may evolve as Primcard expands. Final fees are always shown before confirmation",
+      CARDS: [
+        {
+          LABEL: "PRE-ORDER",
+          TITLE: "Lock in early pricing",
+          DESCRIPTION: "Reserve your Primcard before launch and secure discounted fees",
+          PRICE: {
+            AMOUNT: 600,
+            CURRENCY: "USDT",
+            FREQUENCY: "one-time card fee",
+          },
+          FEATURES: [
+            "Monthly subscription 49 USDT",
+            "Top up fee on the card 5%",
+          ],
+          BUTTON: "Pre-order Primcard",
+        },
+        {
+          LABEL: "from March 1",
+          TITLE: "Standard pricing",
+          DESCRIPTION: "Available after release. Higher fees apply once pre-orders close",
+          PRICE: {
+            AMOUNT: 995,
+            CURRENCY: "USDT",
+            FREQUENCY: "one-time card fee",
+          },
+          FEATURES: [
+            "Monthly subscription 99 USDT",
+            "Top up fee on the card 5%",
+          ],
+          BUTTON: "Order Primcard",
+        },
       ],
     },
     FAQ: {
@@ -107,5 +226,26 @@ export const TEXT = {
         },
       ],
     },
+  },
+  ORDER: {
+    PRE_ORDER: {
+      TITLE: "Pre-order Primcard",
+    },
+    STANDARD: {
+      TITLE: "Standard pricing",
+    },
+  },
+  NOT_FOUND: {
+    BACK_TITLE: "404",
+    TITLE: "This page isn’t available",
+    DESCRIPTION: "You can continue from the homepage.",
+    BUTTON_TEXT: "Go to homepage",
+  },
+  GLOBAL_ERROR: {
+    BACK_TITLE: "Oops!",
+    TITLE: "Something went wrong",
+    DESCRIPTION: "We encountered an unexpected error. Please try again or contact support if the problem persists.",
+    BUTTON_RELOAD_PAGE: "Reload Page",
+    BUTTON_GO_HOME: "Go Home",
   },
 } as const

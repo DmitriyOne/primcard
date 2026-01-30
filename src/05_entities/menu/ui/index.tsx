@@ -1,5 +1,6 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { TMenuItem } from "@/src/05_entities/menu/types"
+
 import { MenuItem } from "./item"
 
 type TProps = {

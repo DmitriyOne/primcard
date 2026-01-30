@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 
 type TProps = {
   isOpen: boolean

@@ -1,7 +1,7 @@
 import { Navbar } from "@/src/04_features/navbar/ui"
 import { Logo } from "@/src/05_entities/logo/ui"
 import { Z_INDEX_CLASSES } from "@/src/06_shared/constants"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Container } from "@/src/06_shared/ui"
 
 export const Header = () => {

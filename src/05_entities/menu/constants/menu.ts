@@ -1,26 +1,27 @@
 import type { TMenuItem } from "@/src/05_entities/menu/types"
-import { anchors, external_paths, TEXT } from "@/src/06_shared/constants"
+import { anchors, external_paths, paths, TEXT } from "@/src/06_shared/constants"
+
 import { TButtonType } from "@/src/06_shared/types"
 
 export const HEADER_MENU_ITEMS: TMenuItem[] = [
   { 
     type: TButtonType.LINK,
-    href: `#${anchors.how}`,
+    href: `${paths.home}#${anchors.how}`,
     label: TEXT.HEADER.MENU[0].LABEL,
   },  
   {
     type: TButtonType.LINK,
-    href: `#${anchors.features}`,
+    href: `${paths.home}#${anchors.features}`,
     label: TEXT.HEADER.MENU[1].LABEL,
   },
   {
     type: TButtonType.LINK,
-    href: `#${anchors.pricing}`,
+    href: `${paths.home}#${anchors.plans}`,
     label: TEXT.HEADER.MENU[2].LABEL,
   },
   {
     type: TButtonType.LINK,
-    href: `#${anchors.faq}`,
+    href: `${paths.home}#${anchors.faq}`,
     label: TEXT.HEADER.MENU[3].LABEL,
   },
   {
@@ -32,7 +33,7 @@ export const HEADER_MENU_ITEMS: TMenuItem[] = [
   },
   {
     type: TButtonType.BUTTON,
-    href: "/test",
+    href: paths.order("pre"),
     label: TEXT.HEADER.MENU[5].LABEL,
     variant: "secondary",
   },
@@ -41,22 +42,22 @@ export const HEADER_MENU_ITEMS: TMenuItem[] = [
 export const FOOTER_MENU_ITEMS: TMenuItem[] = [
   { 
     type: TButtonType.LINK,
-    href: `#${anchors.how}`,
+    href: `${paths.home}#${anchors.how}`,
     label: TEXT.FOOTER.MENU[0].LABEL,
   },  
   {
     type: TButtonType.LINK,
-    href: `#${anchors.features}`,
+    href: `${paths.home}#${anchors.features}`,
     label: TEXT.FOOTER.MENU[1].LABEL,
   },
   {
     type: TButtonType.LINK,
-    href: `#${anchors.pricing}`,
+    href: `${paths.home}#${anchors.plans}`,
     label: TEXT.FOOTER.MENU[2].LABEL,
   },
   {
     type: TButtonType.LINK,
-    href: `#${anchors.faq}`,
+    href: `${paths.home}#${anchors.faq}`,
     label: TEXT.FOOTER.MENU[3].LABEL,
   },
   {

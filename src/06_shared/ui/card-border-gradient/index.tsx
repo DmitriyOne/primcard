@@ -1,13 +1,13 @@
 import type { PropsWithChildren } from "react"
 
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 
 type TProps = PropsWithChildren & {
   className?: string
   bodyClassName?: string
 }
 
-export const GradientCard = ({
+export const CardBorderGradient = ({
   className,
   bodyClassName,
   children,

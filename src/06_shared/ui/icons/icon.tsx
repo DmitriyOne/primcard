@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib/tailwind"
+import { cn } from "@/src/06_shared/libs"
 import { ICONS } from "@/src/06_shared/constants"
 import type { TIconId, TPosition } from "@/src/06_shared/types"
 

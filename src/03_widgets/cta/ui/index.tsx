@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Container, Paragraph, Section, Title } from "@/src/06_shared/ui"
 import { TEXT } from "@/src/06_shared/constants"
 import { BgGradient } from "./bg-gradient"

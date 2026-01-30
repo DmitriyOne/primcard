@@ -1,5 +1,5 @@
 import type { PropsWithChildren, HTMLAttributes } from "react"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 
 type TProps = PropsWithChildren & HTMLAttributes<HTMLDivElement>
 

@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { useCardLift3d } from "@/src/06_shared/hooks"
 import { Z_INDEX_CLASSES } from "@/src/06_shared/constants"
 
@@ -40,7 +40,7 @@ export const CardLift3d = ({ className }: TProps) => {
         src={primcardImage}
         alt="Hero card"
         className="w-full h-full object-cover"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes="(max-width: 768px) 300px, (max-width: 1200px) 50vw, 33vw"
         fill
         style={{
           objectFit: "contain",

@@ -1,5 +1,5 @@
 import { paths } from "@/src/06_shared/constants"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { ActiveLink, Icon } from "@/src/06_shared/ui"
 
 type TProps = {

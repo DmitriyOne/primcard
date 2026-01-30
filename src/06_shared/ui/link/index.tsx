@@ -6,7 +6,7 @@ import { IconTitle } from "@/src/06_shared/ui/icon-title"
 import type { TIconTitleProps } from "@/src/06_shared/ui"
 
 type TBaseLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> &
-PropsWithChildren & {
+  PropsWithChildren & {
     href: string
     variant?: TButtonVariant
     external?: boolean

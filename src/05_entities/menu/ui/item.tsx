@@ -1,10 +1,11 @@
 "use client"
 
-import type { TMenuItem } from "@/src/05_entities/menu/types"
-import { cn } from "@/src/06_shared/lib"
-import { TButtonType } from "@/src/06_shared/types"
-import { ActiveLink, Button, LinkIcon } from "@/src/06_shared/ui"
 import { useCallback } from "react"
+
+import type { TMenuItem } from "@/src/05_entities/menu/types"
+import { cn } from "@/src/06_shared/libs"
+import { TButtonType } from "@/src/06_shared/types"
+import { ActiveLink, Link, LinkIcon } from "@/src/06_shared/ui"
 
 type TProps = {
   item: TMenuItem
@@ -38,22 +39,20 @@ const MenuItemButtonIcon = ({ item, linkClassName, linkTitleClassName, onClick }
   )
 }
 
-const MenuItemButton = ({ item, linkClassName, onClick }: TItemProps) => {
+const MenuItemButton = ({ item, linkTitleClassName, linkClassName, onClick }: TItemProps) => {
   if (item.type !== TButtonType.BUTTON) return null
 
   const buttonItem = item as Extract<TMenuItem, { type: typeof TButtonType.BUTTON }>
 
-  // TODO: change to my link and add href
-  // TODO: add titleClassName={linkTitleClassName}
   return (
-    <Button
+    <Link
+      href={item.href}
       variant={buttonItem.variant}
-      className={cn("text-base md:text-base font-bold", linkClassName)}
+      className={cn("text-base md:text-base font-bold", linkClassName, linkTitleClassName)}
       onClick={onClick}
-      disabled={item.href.includes("test")}
     >
       {buttonItem.label}
-    </Button>
+    </Link>
   )
 }
 

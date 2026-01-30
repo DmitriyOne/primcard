@@ -37,6 +37,7 @@
   --breakpoint-2lg: 73.75rem;
 
   --spacing-18: 74px;
+  --spacing-68: 270px;
   --spacing-86: 365px;
 }
 
@@ -46,6 +47,10 @@
     --foreground: #ededed;
   }
 } */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--background);

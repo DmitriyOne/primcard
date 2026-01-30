@@ -1,6 +1,6 @@
 import { TEXT } from "@/src/06_shared/constants"
-import { cn } from "@/src/06_shared/lib"
-import { Container, GradientCard, Icon, Paragraph, Section, Title } from "@/src/06_shared/ui"
+import { cn } from "@/src/06_shared/libs"
+import { Container, CardBorderGradient, Icon, Paragraph, Section, Title } from "@/src/06_shared/ui"
 import { CARDS } from "../constants"
 
 export const Usage = () => {
@@ -33,7 +33,7 @@ export const Usage = () => {
           )}
         >
           {CARDS.map((card) => (
-            <GradientCard
+            <CardBorderGradient
               key={card.id}
               className="md:flex-[1_1_320px]"
               bodyClassName="py-8 md:py-10"
@@ -70,7 +70,7 @@ export const Usage = () => {
                   "filter blur-[100px]",
                 )}
               />
-            </GradientCard>
+            </CardBorderGradient>
           ))}
         </div>
       </Container>

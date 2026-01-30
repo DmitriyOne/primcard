@@ -1,5 +1,5 @@
-import { cn } from "@/src/06_shared/lib"
-import { Button, LinkIcon } from "@/src/06_shared/ui"
+import { cn } from "@/src/06_shared/libs"
+import { Link, LinkIcon } from "@/src/06_shared/ui"
 import { TCtaButtonItem } from "../types"
 import { TButtonType } from "@/src/06_shared/types"
 
@@ -19,20 +19,18 @@ const SimpleButton = ({ item, linkClassName }: TItemProps) => {
 
   const buttonItem = item as Extract<TCtaButtonItem, { type: typeof TButtonType.BUTTON }>
 
-  // TODO: change to my link and add href
-  // TODO: add titleClassName={linkTitleClassName}
   return (
-    <Button
+    <Link
+      href={item.href}
       variant={buttonItem.variant}
       className={cn(
         "w-full sm:w-fit",
         "text-base md:text-xl font-bold",
         linkClassName,
       )}
-      disabled={item.href.includes("test")}
     >
       {buttonItem.label}
-    </Button>
+    </Link>
   )
 }
 

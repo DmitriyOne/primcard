@@ -20,6 +20,13 @@ import { IconRoundaboutSolid } from "@/src/06_shared/ui/icons/roundabout-solid"
 import { IconTelegram } from "@/src/06_shared/ui/icons/telegram"
 import { IconUsd } from "@/src/06_shared/ui/icons/usd"
 import { IconWalletSolid } from "@/src/06_shared/ui/icons/wallet-solid"
+import { IconCapabilityUsdtCoin } from "@/src/06_shared/ui/icons/capability-usdt-coin"
+import { IconCapabilityEuroCoin } from "@/src/06_shared/ui/icons/capability-euro-coin"
+import { IconCapabilityArrowThroughCoins } from "@/src/06_shared/ui/icons/capability-arrow-through-coins"
+import { IconCapabilityPrivacy } from "@/src/06_shared/ui/icons/capability-privacy"
+import { IconJourneyStepsStraightSolid, IconJourneyStepsCurvedSolid } from "@/src/06_shared/ui/icons/journey-steps-solid"
+import { IconDashLineFromBangladeshToCanada, IconDashLineFromBangladeshToChina } from "@/src/06_shared/ui/icons/dash-line-from-to-flag"
+import { IconChecked } from "@/src/06_shared/ui/icons/checked"
 
 export const ICONS = {
   logo: IconLogo,
@@ -43,4 +50,13 @@ export const ICONS = {
   usd: IconUsd,
   btc: IconBtc,
   eth: IconEth,
+  capabilityUsdtCoin: IconCapabilityUsdtCoin,
+  capabilityEuroCoin: IconCapabilityEuroCoin,
+  capabilityArrowThroughCoins: IconCapabilityArrowThroughCoins,
+  capabilityPrivacy: IconCapabilityPrivacy,
+  journeyStepsStraightSolid: IconJourneyStepsStraightSolid,
+  journeyStepsCurvedSolid: IconJourneyStepsCurvedSolid,
+  dashLineFromBangladeshToCanada: IconDashLineFromBangladeshToCanada,
+  dashLineFromBangladeshToChina: IconDashLineFromBangladeshToChina,
+  checked: IconChecked,
 } as const satisfies Record<string, ComponentType>

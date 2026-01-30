@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Container, Section, Title } from "@/src/06_shared/ui"
 import { GradientText } from "@/src/04_features/gradient-text/ui"
 import { PHILOSOPHY_TITLE_PARTS, PHILOSOPHY_GRADIENT } from "../constants"
