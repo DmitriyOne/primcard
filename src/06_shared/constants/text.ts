@@ -227,6 +227,14 @@ export const TEXT = {
       ],
     },
   },
+  ORDER: {
+    PRE_ORDER: {
+      TITLE: "Pre-order Primcard",
+    },
+    STANDARD: {
+      TITLE: "Standard pricing",
+    },
+  },
   NOT_FOUND: {
     BACK_TITLE: "404",
     TITLE: "This page isn’t available",

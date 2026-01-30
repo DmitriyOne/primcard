@@ -1,7 +1,7 @@
 import { CardLift3d } from "@/src/04_features/card-lift-3d/ui"
-import { TEXT } from "@/src/06_shared/constants"
+import { paths, TEXT } from "@/src/06_shared/constants"
 import { cn } from "@/src/06_shared/libs"
-import { Button, Container, Paragraph, Section, Title } from "@/src/06_shared/ui"
+import { Container, Link, Paragraph, Section, Title } from "@/src/06_shared/ui"
 
 export const HomeHero = () => {
   return (
@@ -25,14 +25,13 @@ export const HomeHero = () => {
           className="mb-12 md:mb-14">
           {TEXT.HOME.HERO.DESCRIPTION}
         </Paragraph>
-        {/* TODO: change to my link and add href */}
-        <Button
+        <Link
+          href={paths.order("pre")}
           variant="secondary"
           className="text-base md:text-xl font-bold"
-          disabled
         >
           {TEXT.HOME.HERO.BUTTON_TEXT}
-        </Button>
+        </Link>
         <CardLift3d className="mt-6 md:mt-8" />
       </Container>
     </Section>

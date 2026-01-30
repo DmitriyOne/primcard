@@ -18,6 +18,7 @@ type TPlanCardPrice = {
 type TPlanCardButton = {
   title: string
   href: string
+  disabled?: boolean
 }
 
 export type TPlanCardItem = {

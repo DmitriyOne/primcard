@@ -1,4 +1,4 @@
-import { TEXT } from "@/src/06_shared/constants"
+import { paths, TEXT } from "@/src/06_shared/constants"
 import type { TPlanCardItem } from "../types"
 
 export const PLAN_CARDS: TPlanCardItem[] = [
@@ -19,7 +19,7 @@ export const PLAN_CARDS: TPlanCardItem[] = [
     features: TEXT.HOME.PLANS.CARDS[0].FEATURES.map((feature) => feature),
     button: {
       title: TEXT.HOME.PLANS.CARDS[0].BUTTON,
-      href: "#/paths.home",
+      href: paths.order("pre"),
     },
   },
   {
@@ -39,7 +39,8 @@ export const PLAN_CARDS: TPlanCardItem[] = [
     features: TEXT.HOME.PLANS.CARDS[1].FEATURES.map((feature) => feature),
     button: {
       title: TEXT.HOME.PLANS.CARDS[1].BUTTON,
-      href: "/disabled",
+      href: paths.order("standard"),
+      disabled: true,
     },
   },
 ]

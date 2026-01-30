@@ -1,5 +1,6 @@
 import type { TMenuItem } from "@/src/05_entities/menu/types"
 import { anchors, external_paths, paths, TEXT } from "@/src/06_shared/constants"
+
 import { TButtonType } from "@/src/06_shared/types"
 
 export const HEADER_MENU_ITEMS: TMenuItem[] = [
@@ -32,7 +33,7 @@ export const HEADER_MENU_ITEMS: TMenuItem[] = [
   },
   {
     type: TButtonType.BUTTON,
-    href: "/test",
+    href: paths.order("pre"),
     label: TEXT.HEADER.MENU[5].LABEL,
     variant: "secondary",
   },
