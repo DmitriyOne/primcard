@@ -14,6 +14,10 @@ export const TEXT = {
         "private crypto spending",
         "withdraw cash with crypto",
       ],
+    },
+    HOME: {
+      TITLE: "No KYC crypto card with high cash withdrawal limits",
+      DESCRIPTION: "A privacy-first crypto card with no KYC onboarding, fast setup and daily cash withdrawals of up to $20,000. Spend crypto globally with confidence.",
       OPEN_GRAPH: {
         SITE_NAME: "Primcard",
         TITLE: "Primcard – a privacy-first crypto card with high cash limits",
