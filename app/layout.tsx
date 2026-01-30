@@ -19,25 +19,14 @@ type TProps = Readonly<PropsWithChildren>
 
 export const metadata: Metadata = {
   metadataBase: new URL(env_client.NEXT_PUBLIC_APP_URL),
-  title: TEXT.META.GLOBAL.TITLE,
+  title: {
+    template: "%s | Primcard",
+    default: TEXT.META.GLOBAL.TITLE,
+  },
   description: TEXT.META.GLOBAL.DESCRIPTION,
   keywords: [...TEXT.META.GLOBAL.KEYWORDS],
   appleWebApp: {
     title: "Primcard",
-  },
-  openGraph: {
-    title: TEXT.META.GLOBAL.OPEN_GRAPH.TITLE,
-    description: TEXT.META.GLOBAL.OPEN_GRAPH.DESCRIPTION,
-    siteName: TEXT.META.GLOBAL.OPEN_GRAPH.SITE_NAME,
-    type: TEXT.META.GLOBAL.OPEN_GRAPH.TYPE,
-    locale: TEXT.META.GLOBAL.OPEN_GRAPH.LOCALE,
-    images: [TEXT.META.GLOBAL.OPEN_GRAPH.IMAGE],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: TEXT.META.GLOBAL.TWITTER.TITLE,
-    description: TEXT.META.GLOBAL.TWITTER.DESCRIPTION,
-    images: [...TEXT.META.GLOBAL.TWITTER.IMAGES],
   },
 }
 
