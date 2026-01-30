@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     type: TEXT.META.HOME.OPEN_GRAPH.TYPE,
     locale: TEXT.META.HOME.OPEN_GRAPH.LOCALE,
     images: [TEXT.META.HOME.OPEN_GRAPH.IMAGE],
-
   },
   twitter: {
     card: "summary_large_image",
