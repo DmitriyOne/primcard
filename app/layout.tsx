@@ -25,6 +25,16 @@ export const metadata: Metadata = {
   },
   description: TEXT.META.GLOBAL.DESCRIPTION,
   keywords: [...TEXT.META.GLOBAL.KEYWORDS],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   appleWebApp: {
     title: "Primcard",
   },
