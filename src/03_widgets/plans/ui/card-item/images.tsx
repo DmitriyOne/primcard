@@ -39,6 +39,7 @@ export const PlanImages = ({ type }: TProps) => {
           src={imageSrc}
           alt="Primcard"
           fill
+          sizes="215px"
           className="object-cover object-center"
         />
       </div>
@@ -57,6 +58,7 @@ export const PlanImages = ({ type }: TProps) => {
           src={imageSrc}
           alt="Primcard"
           fill
+          sizes="215px"
           className="object-cover object-center"
         />
 

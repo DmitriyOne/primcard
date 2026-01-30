@@ -28,6 +28,7 @@ export const JourneyImage = () => {
           src={iPhoneImage}
           alt="iPhone"
           fill
+          sizes="(max-width: 768px) 265px, (max-width: 1280px) 310px, 390px"
           className="object-cover object-top"
         />
       </div>

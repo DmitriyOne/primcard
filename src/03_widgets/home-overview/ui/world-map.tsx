@@ -33,6 +33,7 @@ export const WorldMap = () => {
         src={worldMapImage}
         alt="World Map"
         fill
+        sizes="290px"
         className="object-cover object-[60%]"
       />
       <Icon

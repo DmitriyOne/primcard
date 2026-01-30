@@ -19,6 +19,7 @@ export const EasyStartImage = () => {
           src={iPhoneImage}
           alt="iPhone"
           fill
+          sizes="320px"
           className="object-cover object-center"
         />
       </div>

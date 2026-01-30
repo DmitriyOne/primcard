@@ -25,6 +25,7 @@ export const Cards = () => (
         src={primcardImage}
         alt="Primcard"
         fill
+        sizes="(max-width: 768px) 250px, (max-width: 1024px) 350px, 430px"
         className="object-cover object-center"
       />
     </div>
@@ -41,6 +42,7 @@ export const Cards = () => (
         src={primcardImage}
         alt="Primcard"
         fill
+        sizes="(max-width: 768px) 250px, (max-width: 1024px) 350px, 430px"
         className="object-cover object-center"
       />
 

@@ -22,6 +22,7 @@ export const CashAccessImage = () => {
           src={primcardFlattenedGrayImage}
           alt="flattened primcard"
           fill
+          sizes="250px"
           className="object-cover object-center"
         />
       </div>
@@ -40,6 +41,7 @@ export const CashAccessImage = () => {
           src={primcardFlattenedImage}
           alt="flattened primcard"
           fill
+          sizes="250px"
           className="object-cover object-center"
         />
       </div>

@@ -28,6 +28,7 @@ export const HighLimitsImage = () => {
             src={primcardImage}
             alt="Primcard"
             fill
+            sizes="290px"
             className="object-cover object-center"
           />
         </div>
@@ -46,6 +47,7 @@ export const HighLimitsImage = () => {
             src={primcardImage}
             alt="Primcard"
             fill
+            sizes="290px"
             className="object-cover object-center"
           />
 
