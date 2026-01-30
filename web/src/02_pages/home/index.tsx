@@ -15,6 +15,7 @@ export const HomePage = () => {
   return (
     <>
       <HomeHero />
+      <h1>Hello World</h1>
       <HomeOverview />
       <Capabilities id={anchors.features} />
       <Journey id={anchors.how} />
