@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { TJourneyTextStepItem } from "../types"
 import { JOURNEY_ACTIVE_STEPS, JOURNEY_TEXT_ALIGN_CLASSES, JOURNEY_TEXT_STEP_POSITIONS } from "../constant"
 import { Paragraph, Title } from "@/src/06_shared/ui"

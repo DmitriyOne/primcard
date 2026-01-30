@@ -1,6 +1,6 @@
 import { Label } from "@/src/05_entities/label/ui"
 import { TOverviewLabel } from "../../types"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { OVERVIEW_LABEL_TYPES } from "../../constants"
 
 type TWithdrawType = (typeof OVERVIEW_LABEL_TYPES.WITHDRAW)

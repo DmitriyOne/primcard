@@ -4,7 +4,7 @@ import type { AnchorHTMLAttributes, PropsWithChildren } from "react"
 import Link, { type LinkProps } from "next/link"
 import { usePathname } from "next/navigation"
 
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 
 type TProps = LinkProps &
   AnchorHTMLAttributes<HTMLAnchorElement> &

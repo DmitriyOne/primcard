@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Button, LinkIcon } from "@/src/06_shared/ui"
 import { TCtaButtonItem } from "../types"
 import { TButtonType } from "@/src/06_shared/types"

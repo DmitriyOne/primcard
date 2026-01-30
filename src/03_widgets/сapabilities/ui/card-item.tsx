@@ -4,7 +4,7 @@ import { CardBorderGradient, Paragraph, Title } from "@/src/06_shared/ui"
 import type { TCapabilitiesCardItem, TCapabilitiesCardType } from "../types"
 import { CAPABILITIES_CARD_TYPE } from "../constants"
 
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 
 import { CryptoToFiatImage, HighLimitsImage, CashAccessImage, EasyStartImage, PrivacyImage } from "./images"
 

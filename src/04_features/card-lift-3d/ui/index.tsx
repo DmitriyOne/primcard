@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { useCardLift3d } from "@/src/06_shared/hooks"
 import { Z_INDEX_CLASSES } from "@/src/06_shared/constants"
 

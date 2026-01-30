@@ -1,5 +1,5 @@
 import { Container, Section, Title } from "@/src/06_shared/ui"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Accordion } from "@/src/04_features/accordion/ui"
 import { TId } from "@/src/06_shared/types/id"
 import { FAQ_CONTENT } from "../constants"

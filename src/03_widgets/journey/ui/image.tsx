@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import Image from "next/image"
 
 import iPhoneImage from "../../../../public/images/iPhone.png"

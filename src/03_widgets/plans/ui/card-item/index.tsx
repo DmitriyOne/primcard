@@ -1,6 +1,6 @@
 import { CardBorderGradient, Paragraph, Title } from "@/src/06_shared/ui"
 import type { TPlanCardItem } from "../../types"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Label } from "@/src/05_entities/label/ui"
 import { PlanImages } from "./images"
 import { PlanPrice } from "./price"

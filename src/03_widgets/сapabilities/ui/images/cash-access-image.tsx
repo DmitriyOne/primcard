@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
+
 import primcardFlattenedImage from "../../../../../public/images/primcard-flattened.jpg"
 import primcardFlattenedGrayImage from "../../../../../public/images/primcard-flattened-gray.png"
 

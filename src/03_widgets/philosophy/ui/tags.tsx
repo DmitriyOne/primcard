@@ -1,6 +1,6 @@
 import { useMemo } from "react"
 import { PHILOSOPHY_TAGS } from "../constants"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { InfiniteScroll } from "@/src/04_features/infinite-scroll/ui"
 import { IconTitle } from "@/src/06_shared/ui"
 

@@ -1,5 +1,5 @@
 import { TEXT } from "@/src/06_shared/constants"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Container, CardBorderGradient, Icon, Paragraph, Section, Title } from "@/src/06_shared/ui"
 import { CARDS } from "../constants"
 

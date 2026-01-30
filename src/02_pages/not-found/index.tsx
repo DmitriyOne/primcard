@@ -1,5 +1,5 @@
 import { paths, TEXT } from "@/src/06_shared/constants"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Link, Paragraph, Section, Title } from "@/src/06_shared/ui"
 
 export const NotFoundPage = () => {

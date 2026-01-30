@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { PLAN_CARDS } from "../constants"
 import { CardItem } from "./card-item"
 

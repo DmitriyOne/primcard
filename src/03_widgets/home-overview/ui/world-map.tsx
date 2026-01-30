@@ -1,5 +1,5 @@
 import { TEXT } from "@/src/06_shared/constants"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Icon, Paragraph } from "@/src/06_shared/ui"
 import Image from "next/image"
 

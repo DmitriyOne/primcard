@@ -1,5 +1,5 @@
 import { Icon } from "@/src/06_shared/ui"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { TOverviewLabel } from "../../types"
 import { OVERVIEW_LABEL_TYPES } from "../../constants"
 

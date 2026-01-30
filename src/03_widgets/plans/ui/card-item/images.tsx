@@ -2,7 +2,7 @@ import Image from "next/image"
 
 import type { TPlanCardItem } from "../../types"
 
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 
 import primaryImage from "../../../../../public/images/primcard.jpg"
 import secondaryImage from "../../../../../public/images/primcard-dark-gray.jpg"

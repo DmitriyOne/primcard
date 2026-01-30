@@ -1,6 +1,6 @@
 import { IconTitle } from "@/src/06_shared/ui"
 import { TLabelItem, TLabelVariant } from "../types"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 
 type TProps = TLabelItem & {
   variant?: TLabelVariant

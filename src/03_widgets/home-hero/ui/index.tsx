@@ -1,6 +1,6 @@
 import { CardLift3d } from "@/src/04_features/card-lift-3d/ui"
 import { TEXT } from "@/src/06_shared/constants"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Button, Container, Paragraph, Section, Title } from "@/src/06_shared/ui"
 
 export const HomeHero = () => {

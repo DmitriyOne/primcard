@@ -1,6 +1,6 @@
 import { TEXT } from "@/src/06_shared/constants"
 import { TId } from "@/src/06_shared/types/id"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Container, Section, Title } from "@/src/06_shared/ui"
 import { CARDS } from "../constants"
 import { CapabilityCardItem } from "./card-item"

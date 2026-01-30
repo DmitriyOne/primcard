@@ -4,7 +4,8 @@ import { Burger } from "@/src/05_entities/burger/ui"
 import { HEADER_MENU_ITEMS } from "@/src/05_entities/menu/constants"
 import { Menu } from "@/src/05_entities/menu/ui"
 import { Z_INDEX_CLASSES } from "@/src/06_shared/constants"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
+
 import { useNavbar } from "../hooks"
 
 export const Navbar = () => {

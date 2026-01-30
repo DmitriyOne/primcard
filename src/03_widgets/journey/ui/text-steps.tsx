@@ -1,5 +1,5 @@
 import { TEXT_JOURNEY_TEXT_STEPS } from "../constant"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { JourneyLineStepsMobile } from "./line-steps"
 import { JourneyTextStepsItem } from "./text-step-item"
 

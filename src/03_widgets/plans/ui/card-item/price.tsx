@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Paragraph } from "@/src/06_shared/ui"
 import type { TPlanCardItem } from "../../types"
 

@@ -1,10 +1,11 @@
 "use client"
 
+import { useCallback } from "react"
+
 import type { TMenuItem } from "@/src/05_entities/menu/types"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { TButtonType } from "@/src/06_shared/types"
 import { ActiveLink, Link, LinkIcon } from "@/src/06_shared/ui"
-import { useCallback } from "react"
 
 type TProps = {
   item: TMenuItem

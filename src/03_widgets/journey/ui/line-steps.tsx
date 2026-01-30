@@ -1,4 +1,4 @@
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { Icon } from "@/src/06_shared/ui"
 
 export const JourneyLineStepsDesktop = () => {

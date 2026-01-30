@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
+
 import primcardImage from "../../../../../public/images/primcard.jpg"
 
 export const HighLimitsImage = () => {

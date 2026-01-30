@@ -1,5 +1,5 @@
 import { Label } from "@/src/05_entities/label/ui"
-import { cn } from "@/src/06_shared/lib"
+import { cn } from "@/src/06_shared/libs"
 import { TOverviewLabel } from "../../types"
 import { OVERVIEW_LABEL_TYPES } from "../../constants"
 

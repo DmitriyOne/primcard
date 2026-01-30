@@ -1,5 +1,6 @@
-import { cn } from "@/src/06_shared/lib"
 import type { HTMLAttributes, PropsWithChildren } from "react"
+
+import { cn } from "@/src/06_shared/libs"
 
 export type TTitleTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 
