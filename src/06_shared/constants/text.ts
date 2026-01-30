@@ -14,6 +14,19 @@ export const TEXT = {
         "private crypto spending",
         "withdraw cash with crypto",
       ],
+      OPEN_GRAPH: {
+        SITE_NAME: "Primcard",
+        TITLE: "Primcard – a privacy-first crypto card with high cash limits",
+        DESCRIPTION: "No KYC onboarding, fast setup and daily cash withdrawals of up to $20,000. A next-generation crypto card for private global spending.",
+        TYPE: "website",
+        LOCALE: "en_GB",
+        IMAGE: "/images/og-image.jpg",
+      },
+      TWITTER: {
+        TITLE: "Primcard – a privacy-first crypto card",
+        DESCRIPTION: "A privacy-first crypto card with no KYC onboarding and high daily cash withdrawals.",
+        IMAGES: ["/images/og-image.jpg"],
+      },
     },
     NOT_FOUND: {
       TITLE: "Page not found",
