@@ -54,6 +54,11 @@ export const TEXT = {
       { LABEL: "FAQ" },
       { LABEL: "Chat with us" },
     ],
+    MENU_2: [
+      { LABEL: "Privacy Policy" },
+      { LABEL: "Terms and Conditions" },
+      { LABEL: "Cookies Policy" },
+    ],
     COPYRIGHT: "© 2026 Primcard. All rights reserved.",
   },
   HOME: {
@@ -234,6 +239,18 @@ export const TEXT = {
     STANDARD: {
       TITLE: "Standard pricing",
     },
+  },
+  COOKIES: {
+    TITLE: "Cookies Policy",
+    DESCRIPTION: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ",
+  },
+  TERMS: {
+    TITLE: "Terms and Conditions",
+    DESCRIPTION: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ",
+  },
+  PRIVACY: {
+    TITLE: "Privacy Policy",
+    DESCRIPTION: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ",
   },
   NOT_FOUND: {
     BACK_TITLE: "404",
