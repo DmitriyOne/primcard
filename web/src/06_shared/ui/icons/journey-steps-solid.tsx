@@ -21,6 +21,13 @@ export const IconJourneyStepsStraightSolid = ({ className }: TProps) => {
       <g stroke="#5c5c5c">
         <path d="M6.5 283.001v260" />
         <circle
+          cx="6.5"
+          cy="400"
+          r="4"
+          transform="rotate(252.612 6.5 400)"
+          fill="#050100"
+        />
+        <circle
           cx="5.639"
           cy="540.641"
           r="4"
