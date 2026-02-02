@@ -19,11 +19,11 @@ export const HomeOverview = () => {
           )}
         >
           <Title
-            as='h3'
+            as="h2"
             className={cn(
               "w-full max-w-[640px] mx-auto",
               "mb-24 md:mb-2",
-              "text-3xl",
+              "text-3xl md:text-[36px] lg:text-5xl",
             )}
           >
             {TEXT.HOME.OVERVIEW.TITLE}

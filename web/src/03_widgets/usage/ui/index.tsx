@@ -8,8 +8,8 @@ export const Usage = () => {
     <Section className="py-16 lg:py-24">
       <Container className="text-center">
         <Title
-          as='h3'
-          className="mb-3.5 sm:mb-5 md:mb-6"
+          as="h2"
+          className="md:text-[36px] lg:text-5xl mb-3.5 sm:mb-5 md:mb-6"
         >
           {TEXT.HOME.USAGE.TITLE}
         </Title>
@@ -51,8 +51,8 @@ export const Usage = () => {
                 }}
               />
               <Title
-                as="h4"
-                className="mb-2.5 md:mb-3.5 font-medium"
+                as="h3"
+                className="text-xl md:text-3xl lg:text-4xl mb-2.5 md:mb-3.5 font-medium"
               >
                 {card.title}
               </Title>

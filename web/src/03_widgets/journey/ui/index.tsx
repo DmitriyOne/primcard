@@ -24,8 +24,8 @@ export const Journey = ({ id }: TProps) => {
           "relative",
         )}>
         <Title
-          as='h3'
-          className="px-8 mb-8 lg:mb-18"
+          as="h2"
+          className="md:text-[36px] lg:text-5xl px-8 mb-8 lg:mb-18"
         >
           {TEXT.HOME.JOURNEY.TITLE}
         </Title>
