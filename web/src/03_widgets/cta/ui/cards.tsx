@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 import { cn } from "@/src/06_shared/libs"
 
 import primcardImage from "../../../../public/images/primcard.jpg"
@@ -19,7 +20,7 @@ export const Cards = () => (
         "transform -translate-x-[60%] md:-translate-x-1/2 -rotate-18",
         "rounded-2xl overflow-hidden",
         "w-[250px] h-[150px] md:w-[350px] md:h-[230px] lg:w-[430px] lg:h-[290px]",
-        "z-1",
+        Z_INDEX_CLASSES.CTA_CARD_BACK,
       )}>
       <Image
         src={primcardImage}
@@ -36,7 +37,7 @@ export const Cards = () => (
         "transform -translate-x-2/6 -rotate-6",
         "rounded-2xl overflow-hidden",
         "w-[250px] h-[150px] md:w-[350px] md:h-[230px] lg:w-[430px] lg:h-[290px]",
-        "z-2",
+        Z_INDEX_CLASSES.CTA_CARD_FRONT,
       )}>
       <Image
         src={primcardImage}

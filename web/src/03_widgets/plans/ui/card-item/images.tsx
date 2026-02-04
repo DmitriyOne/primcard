@@ -2,6 +2,7 @@ import Image from "next/image"
 
 import type { TPlanCardItem } from "../../types"
 
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 import { cn } from "@/src/06_shared/libs"
 
 import primaryImage from "../../../../../public/images/primcard.jpg"
@@ -33,7 +34,7 @@ export const PlanImages = ({ type }: TProps) => {
           "rounded-2xl overflow-hidden",
           "w-full",
           "h-[145px]",
-          "z-1",
+          Z_INDEX_CLASSES.PLAN_CARD_BACK,
         )}>
         <Image
           src={imageSrc}
@@ -52,7 +53,7 @@ export const PlanImages = ({ type }: TProps) => {
           "rounded-2xl overflow-hidden",
           "w-full",
           "h-[145px]",
-          "z-2",
+          Z_INDEX_CLASSES.PLAN_CARD_FRONT,
         )}>
         <Image
           src={imageSrc}

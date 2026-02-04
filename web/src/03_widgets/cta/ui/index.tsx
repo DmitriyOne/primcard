@@ -1,6 +1,7 @@
 import { cn } from "@/src/06_shared/libs"
 import { Container, Paragraph, Section, Title } from "@/src/06_shared/ui"
 import { TEXT } from "@/src/06_shared/constants"
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 import { BgGradient } from "./bg-gradient"
 import { BgBlur } from "./bg-blur"
 import { Cards } from "./cards"
@@ -20,7 +21,7 @@ export const Cta = () => {
       <Container className="relative">
         <BgBlur />
         <Cards />
-        <Container className="text-center relative z-4">
+        <Container className={cn("text-center relative", Z_INDEX_CLASSES.CTA_CONTENT)}>
           <Title
             as="h2"
             className={cn(

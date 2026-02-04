@@ -1,4 +1,5 @@
 import { cn } from "@/src/06_shared/libs"
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 
 export const BgBlur = () => (
   <div
@@ -9,7 +10,7 @@ export const BgBlur = () => (
       "w-full md:w-1/2 h-[200px] md:h-full",
       "bg-primary-gradient",
       "blur-[90px] lg:blur-[110px]",
-      "z-1",
+      Z_INDEX_CLASSES.CTA_BG_BLUR,
     )}
   />
 )

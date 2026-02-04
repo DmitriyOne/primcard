@@ -1,4 +1,6 @@
+import { MainHeroBg } from "@/src/03_widgets/hero-bg/ui"
 import { paths, TEXT } from "@/src/06_shared/constants"
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 import { cn } from "@/src/06_shared/libs"
 import { Link, Paragraph, Section, Title } from "@/src/06_shared/ui"
 
@@ -11,6 +13,7 @@ export const NotFoundPage = () => {
         "pb-16 lg:pb-32",
       )}
     >
+      <MainHeroBg />
       <div
         className={cn(
           "relative",
@@ -28,7 +31,7 @@ export const NotFoundPage = () => {
             "absolute",
             "top-1/2 left-1/2",
             "transform -translate-x-1/2 -translate-y-1/2",
-            "z-[-1]",
+            Z_INDEX_CLASSES.ERROR_BACKGROUND_TEXT,
             "select-none",
           )}
         >
