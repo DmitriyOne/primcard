@@ -30,8 +30,8 @@ export const CapabilityCardItem = ({ card }: TProps) => {
       bodyClassName="pt-8"
     >
       <Title
-        as="h6"
-        className="mb-3.5 md:mb-4 font-medium"
+        as="h3"
+        className="text-xl md:text-xl lg:text-2xl mb-3.5 md:mb-4 font-medium"
       >
         {card.title}
       </Title>

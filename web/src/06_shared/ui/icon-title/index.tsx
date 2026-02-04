@@ -38,14 +38,14 @@ export const IconTitle = ({
         />
       )}
       <div>
-        <h5
+        <h3
           className={cn(
             "text-base",
             titleClassName,
           )}
         >
           {title}
-        </h5>
+        </h3>
       </div>
     </div>
   )

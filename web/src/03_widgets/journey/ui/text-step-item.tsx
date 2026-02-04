@@ -25,10 +25,10 @@ export const JourneyTextStepsItem = ({ item }: TProps) => {
       )}
     >
       <Title
-        as='h6'
+        as="h3"
         className={cn(
           "mb-2.5 xl:mb-3",
-          "lg:text-xl xl:text-2xl",
+          "text-xl md:text-xl lg:text-2xl",
         )}
       >
         {item.title}

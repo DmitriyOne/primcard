@@ -1,4 +1,5 @@
 import { paths, TEXT } from "@/src/06_shared/constants"
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 import { cn } from "@/src/06_shared/libs"
 import { Button, Link, Paragraph, Section, Title } from "@/src/06_shared/ui"
 
@@ -34,7 +35,7 @@ export const GlobalErrorPage = ({ reset }: TProps) => {
             "absolute",
             "top-1/2 left-1/2",
             "transform -translate-x-1/2 -translate-y-1/2",
-            "z-[-1]",
+            Z_INDEX_CLASSES.ERROR_BACKGROUND_TEXT,
             "select-none",
           )}
         >

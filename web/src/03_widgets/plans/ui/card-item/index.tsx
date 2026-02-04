@@ -31,8 +31,8 @@ export const CardItem = ({ item }: TProps) => {
         titleClassName="text-primary text-xs md:text-xs font-semibold uppercase"
       />
       <Title
-        as='h4'
-        className="text-3xl font-medium mb-3"
+        as="h3"
+        className="text-3xl lg:text-4xl mb-3"
       >
         {item.title}
       </Title>

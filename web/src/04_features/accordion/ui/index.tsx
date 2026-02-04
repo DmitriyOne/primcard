@@ -17,7 +17,7 @@ export const Accordion = ({ title, content }: TProps) => {
       aria-label="accordion"
     >
       <Title
-        as="h4"
+        as="h3"
         className={cn(
           "flex items-start md:items-center justify-between gap-2",
           "text-left text-lg md:text-xl lg:text-xl font-medium",

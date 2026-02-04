@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 import { cn } from "@/src/06_shared/libs"
 
 import primcardImage from "../../../../../public/images/primcard.jpg"
@@ -22,7 +23,7 @@ export const HighLimitsImage = () => {
             "rounded-2xl overflow-hidden",
             "w-[290px]",
             "h-[185px]",
-            "z-1",
+            Z_INDEX_CLASSES.CAPABILITIES_CARD_BACK,
           )}>
           <Image
             src={primcardImage}
@@ -41,7 +42,7 @@ export const HighLimitsImage = () => {
             "rounded-2xl overflow-hidden",
             "w-[290px]",
             "h-[185px]",
-            "z-2",
+            Z_INDEX_CLASSES.CAPABILITIES_CARD_FRONT,
           )}>
           <Image
             src={primcardImage}

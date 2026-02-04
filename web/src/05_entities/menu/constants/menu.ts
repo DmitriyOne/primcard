@@ -68,3 +68,21 @@ export const FOOTER_MENU_ITEMS: TMenuItem[] = [
     variant: "ghost",
   },
 ]
+
+export const FOOTER_MENU_2_ITEMS: TMenuItem[] = [
+  { 
+    type: TButtonType.LINK,
+    href: paths.policy,
+    label: TEXT.FOOTER.MENU_2[0].LABEL,
+  },  
+  {
+    type: TButtonType.LINK,
+    href: paths.terms,
+    label: TEXT.FOOTER.MENU_2[1].LABEL,
+  },
+  {
+    type: TButtonType.LINK,
+    href: paths.cookies,
+    label: TEXT.FOOTER.MENU_2[2].LABEL,
+  },
+]

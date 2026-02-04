@@ -15,8 +15,8 @@ export const Plans = ({ id }: TProps) => {
     >
       <Container className="text-center">
         <Title
-          as='h3'
-          className="mb-10 md:mb-20"
+          as="h2"
+          className="md:text-[36px] lg:text-5xl mb-10 md:mb-20"
         >
           {TEXT.HOME.PLANS.TITLE}
         </Title>

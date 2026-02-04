@@ -18,8 +18,8 @@ export const Philosophy = () => {
           )}
         >
           <Title
-            as='h3'
-            className="font-bold"
+            as="h2"
+            className="text-4xl md:text-[36px] lg:text-5xl font-bold"
           >
             {PHILOSOPHY_TITLE_PARTS.before}
             <GradientText gradient={PHILOSOPHY_GRADIENT}>

@@ -1,7 +1,10 @@
 import { CardLift3d } from "@/src/04_features/card-lift-3d/ui"
 import { paths, TEXT } from "@/src/06_shared/constants"
+import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 import { cn } from "@/src/06_shared/libs"
 import { Container, Link, Paragraph, Section, Title } from "@/src/06_shared/ui"
+
+import { HomeHeroBg } from "@/src/03_widgets/hero-bg/ui/home-hero-bg"
 
 export const HomeHero = () => {
   return (
@@ -13,7 +16,12 @@ export const HomeHero = () => {
         "overflow-hidden",
       )}
     >
-      <Container className="max-w-80 md:max-w-4xl flex flex-col items-center text-center relative z-1">
+      <Container
+        className={cn(
+          "max-w-80 md:max-w-4xl flex flex-col items-center text-center relative",
+          Z_INDEX_CLASSES.HERO_CONTENT,
+        )}
+      >
         <Title
           as="h1"
           className="mb-5 md:mb-6"
@@ -34,6 +42,7 @@ export const HomeHero = () => {
         </Link>
         <CardLift3d className="mt-6 md:mt-8" />
       </Container>
+      <HomeHeroBg />
     </Section>
   )
 }
