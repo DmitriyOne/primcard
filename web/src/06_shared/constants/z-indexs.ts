@@ -21,4 +21,5 @@ export const Z_INDEX_CLASSES = {
   CTA_CONTENT: "z-4",
   CAPABILITIES_CARD_BACK: "z-1",
   CAPABILITIES_CARD_FRONT: "z-2",
+  FOOTER: "z-1",
 } as const

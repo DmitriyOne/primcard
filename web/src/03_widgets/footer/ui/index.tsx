@@ -1,13 +1,21 @@
 import { Logo } from "@/src/05_entities/logo/ui"
 import { FOOTER_MENU_2_ITEMS, FOOTER_MENU_ITEMS } from "@/src/05_entities/menu/constants"
 import { Menu } from "@/src/05_entities/menu/ui"
-import { TEXT } from "@/src/06_shared/constants"
+import { TEXT, Z_INDEX_CLASSES } from "@/src/06_shared/constants"
 import { cn } from "@/src/06_shared/libs"
 import { Container, Paragraph } from "@/src/06_shared/ui"
 
 export const Footer = () => {
   return (
-    <footer className="w-full px-4 py-14 md:py-16">
+    <footer
+      className={cn(
+        "w-full",
+        "px-4",
+        "py-14 md:py-16",
+        "relative",
+        Z_INDEX_CLASSES.FOOTER,
+      )}
+    >
       <Container className="flex flex-col gap-y-6 md:gap-y-8">
         <Logo />
         <Menu
