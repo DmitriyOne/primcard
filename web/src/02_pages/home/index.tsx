@@ -16,7 +16,6 @@ export const HomePage = () => {
     <>
       <HomeHero />
       <HomeOverview />
-      Test 5
       <Capabilities id={anchors.features} />
       <Journey id={anchors.how} />
       <Usage />
