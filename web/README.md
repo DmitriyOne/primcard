@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Primcard Web
 
-## Getting Started
+This folder contains the **Primcard web app** (Next.js).
 
-First, run the development server:
+## Sections
+
+- [Git workflow](#git-workflow)
+- [Local development](#local-development)
+- [Deploy](#deploy)
+
+## Git workflow
+
+We use strict branches:
+
+- `master`: main layout / main release branch
+- `stage`: based on `master` (release to the staging domain)
+- `develop`: based on `stage` (releases to preview domains)
+
+Rules:
+
+- All new branches must be created from `develop` and include the release name, for example:
+  `release-xxx/feature/name` or `release-xxx/fix/name`
+- Merge flow is always:
+  `release-xxx/*` → `develop` → `stage` → `master`
+- **Do not use any other flow.**
+
+## Local development
+
+1. Clone the main repository.
+2. Install dependencies:
+
+```bash
+npm i
+```
+
+3. Create `web/.env.local`.
+   Use `web/.env.example` as a template.
+4. Start dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App will be available on `http://localhost:3000` (if the port is free).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+We deploy with **Vercel**.
 
-## Learn More
+- Only pushes to `develop`, `stage`, and `master` trigger automatic builds in Vercel.
+- Release branches do not trigger Vercel builds by default.
+- Each branch uses its own Vercel environment variables (preview / stage / production).
 
-To learn more about Next.js, take a look at the following resources:
+Production process:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- A build from `master` does **not** update the main production domain automatically.
+- Vercel will provide a private preview link for review.
+- If everything is OK, you can promote the selected build to production (Vercel “Promote to Production”).
