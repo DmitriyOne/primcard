@@ -4,25 +4,9 @@ This folder contains the **Primcard web app** (Next.js).
 
 ## Sections
 
-- [Git workflow](#git-workflow)
 - [Local development](#local-development)
 - [Deploy](#deploy)
-
-## Git workflow
-
-We use strict branches:
-
-- `master`: main layout / main release branch
-- `stage`: based on `master` (release to the staging domain)
-- `develop`: based on `stage` (releases to preview domains)
-
-Rules:
-
-- All new branches must be created from `develop` and include the release name, for example:
-  `release-xxx/feature/name` or `release-xxx/fix/name`
-- Merge flow is always:
-  `release-xxx/*` → `develop` → `stage` → `master`
-- **Do not use any other flow.**
+- [Git workflow (root README)](../README.md#git-workflow)
 
 ## Local development
 
