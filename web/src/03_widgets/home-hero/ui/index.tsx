@@ -4,7 +4,7 @@ import { Z_INDEX_CLASSES } from "@/src/06_shared/constants/z-indexs"
 import { cn } from "@/src/06_shared/libs"
 import { Container, Link, Paragraph, Section, Title } from "@/src/06_shared/ui"
 
-import { HomeHeroBg } from "@/src/03_widgets/hero-bg/ui/home-hero-bg"
+import { HomeHeroBg } from "@/src/03_widgets/hero-bg/ui"
 
 export const HomeHero = () => {
   return (
