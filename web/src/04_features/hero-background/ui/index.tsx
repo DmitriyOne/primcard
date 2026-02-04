@@ -21,7 +21,6 @@ export const HeroShadeOverlay = () => (
     className={cn(
       "absolute top-0 left-0 w-full h-full",
       "bg-[linear-gradient(90deg,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0)_45%),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_25%,rgba(0,0,0,0.6)_50%,rgba(0,0,0,0.9)_75%,#000_100%)]",
-      "bg-blend-luminosity",
       Z_INDEX_CLASSES.HERO_SHADE_OVERLAY,
     )}
   />
