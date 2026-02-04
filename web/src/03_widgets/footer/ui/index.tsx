@@ -1,5 +1,5 @@
 import { Logo } from "@/src/05_entities/logo/ui"
-import { FOOTER_MENU_ITEMS } from "@/src/05_entities/menu/constants"
+import { FOOTER_MENU_2_ITEMS, FOOTER_MENU_ITEMS } from "@/src/05_entities/menu/constants"
 import { Menu } from "@/src/05_entities/menu/ui"
 import { TEXT } from "@/src/06_shared/constants"
 import { cn } from "@/src/06_shared/libs"
@@ -31,9 +31,26 @@ export const Footer = () => {
           linkTitleClassName="text-sm md:text-base"
           items={FOOTER_MENU_ITEMS}
         />
-        <Paragraph className="text-xs max-md:mt-3 max-md:text-center">
-          {TEXT.FOOTER.COPYRIGHT}
-        </Paragraph>
+
+        <div
+          className={cn(
+            "flex",
+            "flex-col md:flex-row",
+            "justify-start md:items-center md:justify-between",
+            "gap-y-8 md:gap-x-4",
+          )}
+        >
+          <Paragraph className="text-xs md:text-base">
+            {TEXT.FOOTER.COPYRIGHT}
+          </Paragraph>
+
+          <Menu
+            className="w-fit"
+            items={FOOTER_MENU_2_ITEMS}
+            itemClassName="w-fit mb-4 lg:mr-8 2lg:mr-8"
+            linkClassName="text-xs md:text-base md:hover:underline"
+          />
+        </div>
       </Container>
     </footer>
   )
