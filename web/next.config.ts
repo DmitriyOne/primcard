@@ -1,5 +1,7 @@
 import type { NextConfig } from "next"
 
+console.log(process.env)
+
 import "./src/06_shared/libs/env/server"
 import "./src/06_shared/libs/env/client"
 
