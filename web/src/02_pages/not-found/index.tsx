@@ -37,7 +37,12 @@ export const NotFoundPage = () => {
         >
           {TEXT.NOT_FOUND.BACK_TITLE}
         </span>
-        <div className="transform translate-y-[6px] lg:translate-y-[14px]">
+        <div
+          className={cn(
+            "transform translate-y-[6px] lg:translate-y-[14px]",
+            Z_INDEX_CLASSES.NOT_FOUND_CONTENT,
+          )}
+        >
           <Title
             as="h1"
             className="text-4xl md:text-5xl lg:text-6xl mb-3 md:mb-4"
