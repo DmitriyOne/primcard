@@ -1,8 +1,3 @@
-# Define a linked project variable as user input
-variable "linked_project" {
-  type = string
-}
-
 # Configure api settings for the linked project
 resource "supabase_settings" "production" {
   project_ref = var.linked_project

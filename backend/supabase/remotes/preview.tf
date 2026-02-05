@@ -1,18 +1,3 @@
-variable "linked_project" {
-  type = string
-}
-
-variable "git_branch" {
-  type    = string
-  default = null
-}
-
-variable "preview_site_url" {
-  type        = string
-  default     = "http://localhost:3001"
-  description = "Base URL for preview environment. Used for auth redirects and email links."
-}
-
 # Fetch all branches of a linked project
 data "supabase_branch" "all" {
   parent_project_ref = var.linked_project
