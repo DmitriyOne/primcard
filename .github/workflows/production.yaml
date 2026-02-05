@@ -1,5 +1,9 @@
 name: Release (Production)
 
+# Permissions for private repository access
+permissions:
+  contents: read
+
 on:
   push:
     branches: [master]
@@ -21,6 +25,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: supabase/setup-cli@v1
         with:
@@ -40,6 +46,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: hashicorp/setup-terraform@v3
         with:
