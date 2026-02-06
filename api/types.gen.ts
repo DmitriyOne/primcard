@@ -73,6 +73,24 @@ export type Database = {
         }
         Relationships: []
       }
+      role_levels: {
+        Row: {
+          id: number
+          level: number
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Insert: {
+          id?: number
+          level: number
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Update: {
+          id?: number
+          level?: number
+          role?: Database["public"]["Enums"]["app_role"]
+        }
+        Relationships: []
+      }
       role_permissions: {
         Row: {
           id: number
