@@ -57,7 +57,7 @@ revoke all
   on table public.user_roles
   from authenticated, anon, public;
 
-create policy "Allow auth admin to read user roles" ON public.user_roles
+create policy "auth_admin_select_user_roles_for_token_hook" ON public.user_roles
 as permissive for select
 to supabase_auth_admin
 using (true);

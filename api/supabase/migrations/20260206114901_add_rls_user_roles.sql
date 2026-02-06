@@ -18,29 +18,29 @@ create policy "authenticated_select_user_roles"
 comment on policy "authenticated_select_user_roles" on public.user_roles is 'Allow authenticated users to view their own roles or super-admin to view all';
 
 -- RLS Policies: Allow only super-admin to insert user roles
-create policy "authenticated_insert_user_roles"
+create policy "super_admin_insert_user_roles"
   on public.user_roles
   for insert
   to authenticated
   with check (public.is_super_admin());
 
-comment on policy "authenticated_insert_user_roles" on public.user_roles is 'Allow only super-admin to assign roles to users';
+comment on policy "super_admin_insert_user_roles" on public.user_roles is 'Allow only super-admin to assign roles to users';
 
 -- RLS Policies: Allow only super-admin to update user roles
-create policy "authenticated_update_user_roles"
+create policy "super_admin_update_user_roles"
   on public.user_roles
   for update
   to authenticated
   using (public.is_super_admin())
   with check (public.is_super_admin());
 
-comment on policy "authenticated_update_user_roles" on public.user_roles is 'Allow only super-admin to update user roles';
+comment on policy "super_admin_update_user_roles" on public.user_roles is 'Allow only super-admin to update user roles';
 
 -- RLS Policies: Allow only super-admin to delete user roles
-create policy "authenticated_delete_user_roles"
+create policy "super_admin_delete_user_roles"
   on public.user_roles
   for delete
   to authenticated
   using (public.is_super_admin());
 
-comment on policy "authenticated_delete_user_roles" on public.user_roles is 'Allow only super-admin to remove roles from users';
+comment on policy "super_admin_delete_user_roles" on public.user_roles is 'Allow only super-admin to remove roles from users';
