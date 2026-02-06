@@ -15,29 +15,29 @@ create policy "authenticated_select_role_permissions"
 comment on policy "authenticated_select_role_permissions" on public.role_permissions is 'Allow authenticated users to view role permissions';
 
 -- RLS Policies: Allow only super-admin to insert role permissions
-create policy "authenticated_insert_role_permissions"
+create policy "super_admin_insert_role_permissions"
   on public.role_permissions
   for insert
   to authenticated
   with check (public.is_super_admin());
 
-comment on policy "authenticated_insert_role_permissions" on public.role_permissions is 'Allow only super-admin to assign permissions to roles';
+comment on policy "super_admin_insert_role_permissions" on public.role_permissions is 'Allow only super-admin to assign permissions to roles';
 
 -- RLS Policies: Allow only super-admin to update role permissions
-create policy "authenticated_update_role_permissions"
+create policy "super_admin_update_role_permissions"
   on public.role_permissions
   for update
   to authenticated
   using (public.is_super_admin())
   with check (public.is_super_admin());
 
-comment on policy "authenticated_update_role_permissions" on public.role_permissions is 'Allow only super-admin to update role permissions';
+comment on policy "super_admin_update_role_permissions" on public.role_permissions is 'Allow only super-admin to update role permissions';
 
 -- RLS Policies: Allow only super-admin to delete role permissions
-create policy "authenticated_delete_role_permissions"
+create policy "super_admin_delete_role_permissions"
   on public.role_permissions
   for delete
   to authenticated
   using (public.is_super_admin());
 
-comment on policy "authenticated_delete_role_permissions" on public.role_permissions is 'Allow only super-admin to remove permissions from roles';
+comment on policy "super_admin_delete_role_permissions" on public.role_permissions is 'Allow only super-admin to remove permissions from roles';
