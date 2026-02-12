@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: #050100;
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .gradient-bg {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(116deg, #FF7714 0%, #000 30%, #000 70%, #FF7714 100%);
+        pointer-events: none;
+      }
+
+      .blur-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(90px);
+        -webkit-backdrop-filter: blur(90px);
+        pointer-events: none;
+      }
+
+      .table-wrapper {
+        max-width: 480px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .container-cell {
+        padding: 24px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 48px 40px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        text-align: center;
+      }
+
+      .icon {
+        width: 64px;
+        height: 64px;
+        background-color: #0D0D0D;
+        border-radius: 16px;
+        margin: 0 auto 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon span {
+        font-size: 32px;
+      }
+
+      .title {
+        margin: 0 0 12px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #050100;
+      }
+
+      .description {
+        margin: 0 0 32px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #050100;
+      }
+
+      .btn {
+        display: inline-block;
+        background: linear-gradient(225deg, #FF7714 24.89%, #F33D39 75.64%);
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 14px 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(255, 61, 57, 0.4);
+      }
+
+      .fallback {
+        margin: 24px 0 0;
+        font-size: 13px;
+        color: #050100;
+      }
+
+      .fallback a {
+        color: #FF7714;
+        word-break: break-all;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 24px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      @media (max-width: 768px) {
+        .container-cell {
+          padding: 20px 12px;
+        }
+        .icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+        }
+        .icon span {
+          font-size: 24px;
+        }
+        .card {
+          padding: 30px 12px;
+          border-radius: 12px;
+        }
+        .description {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        .btn {
+          font-size: 14px;
+          padding: 14px 24px;
+          border-radius: 8px;
+        }
+        .fallback {
+          font-size: 11px;
+          margin-top: 20px;
+        }
+        .footer {
+          margin-top: 14px;
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient-bg"></div>
+    <div class="blur-overlay"></div>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" class="table-wrapper">
+      <tr>
+        <td class="container-cell">
+          <div class="card">
+            <div class="icon">
+              <span>🔗</span>
+            </div>
+            <h1 class="title">
+              Sign in with magic link
+            </h1>
+            <p class="description">
+              Click the button below to sign in to your account. This link will expire soon for security reasons.
+            </p>
+            <a href="{{ .ConfirmationURL }}" class="btn">
+              Sign in
+            </a>
+            <p class="fallback">
+              If the button doesn't work, copy this link:
+              <br/>
+              <a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+            </p>
+          </div>
+          <p class="footer">
+            This is an automated message, please do not reply.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

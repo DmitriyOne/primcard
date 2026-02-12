@@ -34,60 +34,21 @@ export type Database = {
   }
   public: {
     Tables: {
-      orders: {
+      profiles: {
         Row: {
-          created_at: string
-          delivery_address: string | null
           email: string | null
           id: string
-          message: string | null
-          order_id: string
-          phone: string | null
-          preferred_contact_method: Database["public"]["Enums"]["contact_method"]
-          social_username: string | null
-          updated_at: string
+          username: string | null
         }
         Insert: {
-          created_at?: string
-          delivery_address?: string | null
           email?: string | null
-          id?: string
-          message?: string | null
-          order_id: string
-          phone?: string | null
-          preferred_contact_method: Database["public"]["Enums"]["contact_method"]
-          social_username?: string | null
-          updated_at?: string
+          id: string
+          username?: string | null
         }
         Update: {
-          created_at?: string
-          delivery_address?: string | null
           email?: string | null
           id?: string
-          message?: string | null
-          order_id?: string
-          phone?: string | null
-          preferred_contact_method?: Database["public"]["Enums"]["contact_method"]
-          social_username?: string | null
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      role_levels: {
-        Row: {
-          id: number
-          level: number
-          role: Database["public"]["Enums"]["app_role"]
-        }
-        Insert: {
-          id?: number
-          level: number
-          role: Database["public"]["Enums"]["app_role"]
-        }
-        Update: {
-          id?: number
-          level?: number
-          role?: Database["public"]["Enums"]["app_role"]
+          username?: string | null
         }
         Relationships: []
       }
@@ -98,13 +59,31 @@ export type Database = {
           role: Database["public"]["Enums"]["app_role"]
         }
         Insert: {
-          id?: number
+          id?: never
           permission: Database["public"]["Enums"]["app_permission"]
           role: Database["public"]["Enums"]["app_role"]
         }
         Update: {
-          id?: number
+          id?: never
           permission?: Database["public"]["Enums"]["app_permission"]
+          role?: Database["public"]["Enums"]["app_role"]
+        }
+        Relationships: []
+      }
+      user_role_priority: {
+        Row: {
+          id: number
+          priority: Database["public"]["Enums"]["app_role_priority"]
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Insert: {
+          id?: never
+          priority: Database["public"]["Enums"]["app_role_priority"]
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Update: {
+          id?: never
+          priority?: Database["public"]["Enums"]["app_role_priority"]
           role?: Database["public"]["Enums"]["app_role"]
         }
         Relationships: []
@@ -116,12 +95,12 @@ export type Database = {
           user_id: string
         }
         Insert: {
-          id?: number
+          id?: never
           role: Database["public"]["Enums"]["app_role"]
           user_id: string
         }
         Update: {
-          id?: number
+          id?: never
           role?: Database["public"]["Enums"]["app_role"]
           user_id?: string
         }
@@ -132,10 +111,17 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      add_super_admin: { Args: { new_user: string }; Returns: undefined }
       authorize: {
         Args: {
           requested_permission: Database["public"]["Enums"]["app_permission"]
+        }
+        Returns: boolean
+      }
+      can_view_user: { Args: { target_user_id: string }; Returns: boolean }
+      check_role_hierarchy_permissions: {
+        Args: {
+          new_role: Database["public"]["Enums"]["app_role"]
+          target_user_id: string
         }
         Returns: boolean
       }
@@ -144,21 +130,22 @@ export type Database = {
     }
     Enums: {
       app_permission:
-        | "orders.update"
-        | "orders.delete"
-        | "orders.insert"
-        | "orders.select"
+        | "user_roles.select"
+        | "user_roles.insert"
+        | "user_roles.update"
+        | "user_roles.delete"
       app_role: "super-admin" | "admin" | "manager"
-      contact_method:
-        | "email"
-        | "phone"
-        | "whatsapp"
-        | "telegram"
-        | "facebook"
-        | "discord"
-        | "signal"
-        | "viber"
-        | "other"
+      app_role_priority:
+        | "100"
+        | "90"
+        | "80"
+        | "70"
+        | "60"
+        | "50"
+        | "40"
+        | "30"
+        | "20"
+        | "10"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -290,22 +277,23 @@ export const Constants = {
   public: {
     Enums: {
       app_permission: [
-        "orders.update",
-        "orders.delete",
-        "orders.insert",
-        "orders.select",
+        "user_roles.select",
+        "user_roles.insert",
+        "user_roles.update",
+        "user_roles.delete",
       ],
       app_role: ["super-admin", "admin", "manager"],
-      contact_method: [
-        "email",
-        "phone",
-        "whatsapp",
-        "telegram",
-        "facebook",
-        "discord",
-        "signal",
-        "viber",
-        "other",
+      app_role_priority: [
+        "100",
+        "90",
+        "80",
+        "70",
+        "60",
+        "50",
+        "40",
+        "30",
+        "20",
+        "10",
       ],
     },
   },
