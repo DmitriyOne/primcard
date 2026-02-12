@@ -8,6 +8,7 @@ import { TEXT } from "@/src/06_shared/constants/text"
 import { env_client } from "@/src/06_shared/libs/env/client"
 
 import "./globals.css"
+import { isProduction } from "@/src/06_shared/utils"
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -26,19 +27,17 @@ export const metadata: Metadata = {
   description: TEXT.META.GLOBAL.DESCRIPTION,
   keywords: [...TEXT.META.GLOBAL.KEYWORDS],
   robots: {
-    index: false,
-    follow: false,
+    index: isProduction ? true : false,
+    follow: isProduction ? true : false,
+    ...(isProduction ? {
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    } : {}),
   },
-  // robots: {
-  //   index: true,
-  //   follow: true,
-  //   googleBot: {
-  //     index: true,
-  //     follow: true,
-  //     "max-image-preview": "large",
-  //     "max-snippet": -1,
-  //   },
-  // },
   appleWebApp: {
     title: "Primcard",
   },

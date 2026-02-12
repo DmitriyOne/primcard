@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import { HomePage } from "@/src/02_pages/home"
 import { TEXT } from "@/src/06_shared/constants/text"
 import { paths } from "@/src/06_shared/constants"
-import { env_server } from "@/src/06_shared/libs/env/server"
 
 export const metadata: Metadata = {
   title: TEXT.META.HOME.TITLE,
@@ -28,8 +27,6 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-
-  console.log(env_server)
 
   return (
     <HomePage />
