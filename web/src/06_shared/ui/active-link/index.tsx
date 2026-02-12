@@ -29,8 +29,9 @@ export const ActiveLink = ({
     "font-inter font-medium",
     "text-lg text-dark-black tracking-tight leading-[140%]",
     !isActive && "lg:hover:underline",
-    isActive && `cursor-default ${activeClassName}`,
+    isActive && "cursor-default",
     className,
+    isActive && activeClassName,
   )
 
   if (isActive) {

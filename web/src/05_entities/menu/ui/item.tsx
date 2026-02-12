@@ -12,12 +12,14 @@ type TProps = {
   className?: string
   linkClassName?: string
   linkTitleClassName?: string
+  linkActiveClassName?: string
   onClick?: () => void
 }
 
 type TItemProps = Omit<TProps, "className"> & {
   linkClassName?: string
   linkTitleClassName?: string
+  linkActiveClassName?: string
 }
 
 const MenuItemButtonIcon = ({ item, linkClassName, linkTitleClassName, onClick }: TItemProps) => {
@@ -56,7 +58,7 @@ const MenuItemButton = ({ item, linkTitleClassName, linkClassName, onClick }: TI
   )
 }
 
-const MenuItemLink = ({ item, linkClassName, onClick }: TItemProps) => {
+const MenuItemLink = ({ item, linkClassName, linkActiveClassName, onClick }: TItemProps) => {
   if (item.type !== TButtonType.LINK) return null
 
   return (
@@ -64,6 +66,7 @@ const MenuItemLink = ({ item, linkClassName, onClick }: TItemProps) => {
       href={item.href}
       onClick={onClick}
       className={linkClassName}
+      activeClassName={linkActiveClassName}
     >
       {item.label}
     </ActiveLink>
@@ -81,6 +84,7 @@ export const MenuItem = ({
   className,
   linkClassName,
   linkTitleClassName,
+  linkActiveClassName,
   onClick,
 }: TProps) => {
 
@@ -104,6 +108,7 @@ export const MenuItem = ({
         item={item}
         linkClassName={linkClassName}
         linkTitleClassName={linkTitleClassName}
+        linkActiveClassName={linkActiveClassName}
         onClick={handleClick}
       />
     </li>

@@ -3,7 +3,7 @@ import type { TOrderPlanSlug } from "./slugs"
 export const paths = {
   home: "/",
   order: (plan: TOrderPlanSlug) => `/order/${plan}`,
-  policy: "/policy",
+  privacy: "/privacy",
   terms: "/terms",
   cookies: "/cookies",
 } as const
