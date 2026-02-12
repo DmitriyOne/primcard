@@ -9,6 +9,7 @@ type TProps = {
   itemClassName?: string
   linkClassName?: string
   linkTitleClassName?: string
+  linkActiveClassName?: string
   onCloseMenu?: () => void
 }
 
@@ -18,6 +19,7 @@ export const Menu = ({
   itemClassName,
   linkClassName,
   linkTitleClassName,
+  linkActiveClassName,
   onCloseMenu,
 }: TProps) => {
 
@@ -36,6 +38,7 @@ export const Menu = ({
           className={itemClassName}
           linkClassName={linkClassName}
           linkTitleClassName={linkTitleClassName}
+          linkActiveClassName={linkActiveClassName}
           onClick={onCloseMenu}
         />
       ))}

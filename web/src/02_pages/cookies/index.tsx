@@ -1,6 +1,7 @@
-import { TEXT } from "@/src/06_shared/constants"
+import { COOKIES_CONTENT } from "@/src/03_widgets/policy-content/constants/cookies"
+import { PolicyContent } from "@/src/03_widgets/policy-content/ui"
 import { cn } from "@/src/06_shared/libs"
-import { Paragraph, Section, Title } from "@/src/06_shared/ui"
+import { Section } from "@/src/06_shared/ui"
 
 export const CookiesPage = () => {
 
@@ -20,18 +21,7 @@ export const CookiesPage = () => {
           "w-full max-w-3xl mx-auto",
         )}
       >
-        <Title
-          as="h1"
-          className="text-4xl md:text-5xl lg:text-6xl mb-10 md:mb-20"
-        >
-          {TEXT.COOKIES.TITLE}
-        </Title>
-        <Paragraph
-          className="text-left"
-          variant="secondary"
-        >
-          {TEXT.COOKIES.DESCRIPTION}
-        </Paragraph>
+        <PolicyContent content={COOKIES_CONTENT} />
       </div>
     </Section>
   )
