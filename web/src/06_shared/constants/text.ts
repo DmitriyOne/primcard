@@ -241,12 +241,46 @@ export const TEXT = {
     },
   },
   COOKIES: {
+    CURRENT_DATE: "Current as of 2 Feb 2026",
     TITLE: "Cookies Policy",
-    DESCRIPTION: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ",
+    DESCRIPTIONS: [
+      {
+        TITLE: "",
+        CONTENT: [
+          "Lorem ipsum text is commonly used in design projects to simulate real content within layouts and templates. It allows designers and developers to evaluate spacing, typography, and visual hierarchy without relying on finalized copy. This type of placeholder text keeps attention on structure and presentation while maintaining a natural reading rhythm across different sections of a page or interface design.",
+          "Another sample paragraph continues with similar length and balance to ensure consistency in appearance. It helps teams review alignment, margins, and overall composition before actual content is prepared and approved. Using neutral filler text like this makes it easier to focus on layout decisions and visual clarity during the early stages of product development and testing.",
+        ],
+      },
+      {
+        TITLE: "What information do we collect?",
+        CONTENT: [
+          "Dolor text examples are often used to simulate realistic content within complex layouts and interface sections. They provide a natural distribution of characters and spacing while remaining neutral in meaning. In structured page compositions, such placeholder copy helps teams evaluate alignment, hierarchy, and visual rhythm without focusing on final wording or messaging decisions.",
+          "Additional sample content continues with similar density and length to preserve consistency across the design. It allows developers and designers to observe how paragraphs wrap, how margins behave, and how different components respond to variable text blocks. Neutral filler copy supports layout validation, readability testing, and spacing adjustments during early development stages before production content is available.",
+          "Final placeholder text extends the example to ensure balance between sections and maintain proportional volume. It mirrors realistic editorial flow, creating an authentic reading pattern for preview purposes. This approach enables teams to review typography, spacing, and overall presentation in a controlled and predictable way across multiple responsive breakpoints.",
+        ],
+      },
+    ],
   },
   TERMS: {
+    CURRENT_DATE: "Current as of 2 Feb 2026",
     TITLE: "Terms and Conditions",
-    DESCRIPTION: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ",
+    DESCRIPTIONS: [
+      {
+        TITLE: "",
+        CONTENT: [
+          "Lorem ipsum text is commonly used in design projects to simulate real content within layouts and templates. It allows designers and developers to evaluate spacing, typography, and visual hierarchy without relying on finalized copy. This type of placeholder text keeps attention on structure and presentation while maintaining a natural reading rhythm across different sections of a page or interface design.",
+          "Another sample paragraph continues with similar length and balance to ensure consistency in appearance. It helps teams review alignment, margins, and overall composition before actual content is prepared and approved. Using neutral filler text like this makes it easier to focus on layout decisions and visual clarity during the early stages of product development and testing.",
+        ],
+      },
+      {
+        TITLE: "What information do we collect?",
+        CONTENT: [
+          "Dolor text examples are often used to simulate realistic content within complex layouts and interface sections. They provide a natural distribution of characters and spacing while remaining neutral in meaning. In structured page compositions, such placeholder copy helps teams evaluate alignment, hierarchy, and visual rhythm without focusing on final wording or messaging decisions.",
+          "Additional sample content continues with similar density and length to preserve consistency across the design. It allows developers and designers to observe how paragraphs wrap, how margins behave, and how different components respond to variable text blocks. Neutral filler copy supports layout validation, readability testing, and spacing adjustments during early development stages before production content is available.",
+          "Final placeholder text extends the example to ensure balance between sections and maintain proportional volume. It mirrors realistic editorial flow, creating an authentic reading pattern for preview purposes. This approach enables teams to review typography, spacing, and overall presentation in a controlled and predictable way across multiple responsive breakpoints.",
+        ],
+      },
+    ],
   },
   PRIVACY: {
     CURRENT_DATE: "Current as of 2 Feb 2026",
