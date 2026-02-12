@@ -19,7 +19,7 @@ This repository is a **monorepo** for the **Primcard** project.
 You can find **local development** and **production deploy** instructions inside each folder (see its `README.md`):
 
 - Web: [`./web/README.md`](./web/README.md)
-- Api: `./api/README.md` — **coming soon** (not available yet)
+- Api: [`./api/README.md`](./api/README.md)
 - CRM: `./crm/README.md` — **coming soon** (not available yet)
 
 ## Git workflow

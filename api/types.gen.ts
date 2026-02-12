@@ -39,7 +39,7 @@ export type Database = {
           created_at: string
           delivery_address: string | null
           email: string
-          id: string
+          id: number
           message: string | null
           order_id: string
           payment_status: Database["public"]["Enums"]["payment_status"]
@@ -52,7 +52,7 @@ export type Database = {
           created_at?: string
           delivery_address?: string | null
           email: string
-          id?: string
+          id?: never
           message?: string | null
           order_id: string
           payment_status?: Database["public"]["Enums"]["payment_status"]
@@ -65,7 +65,7 @@ export type Database = {
           created_at?: string
           delivery_address?: string | null
           email?: string
-          id?: string
+          id?: never
           message?: string | null
           order_id?: string
           payment_status?: Database["public"]["Enums"]["payment_status"]
