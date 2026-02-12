@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
 
-  console.log(env_server)
+  console.log("page.tsx", env_server)
 
   return (
     <HomePage />
