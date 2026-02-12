@@ -22,7 +22,7 @@ create type public.payment_status as enum (
 
 -- Create orders table
 create table public.orders (
-  id                        bigint generated always as identity primary key
+  id                        bigint generated always as identity primary key,
   order_id                  text not null unique,
   email                     text not null,
   phone                     text,
