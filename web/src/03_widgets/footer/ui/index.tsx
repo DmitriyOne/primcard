@@ -57,6 +57,7 @@ export const Footer = () => {
             items={FOOTER_MENU_2_ITEMS}
             itemClassName="w-fit mb-4 lg:mr-8 2lg:mr-8"
             linkClassName="text-xs md:text-base md:hover:underline"
+            linkActiveClassName="underline md:hover:underline"
           />
         </div>
       </Container>
