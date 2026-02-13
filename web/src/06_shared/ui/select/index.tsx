@@ -92,9 +92,10 @@ export const Select = ({
             className={cn(
               "flex items-center justify-between",
               "gap-x-3",
+              "whitespace-nowrap text-ellipsis",
             )}
           >
-            <span>
+            <span className="min-w-0 truncate">
               {selectedOption ? selectedOption.label : placeholder}
             </span>
             <Icon
