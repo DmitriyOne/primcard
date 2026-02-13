@@ -4,7 +4,7 @@ export const paths = {
   home: "/",
   order: (plan: TOrderPlanSlug) => `/order/${plan}`,
   privacy: "/privacy",
-  terms: "/terms",
+  terms_and_conditions: "/terms-and-conditions",
   cookies: "/cookies",
   thank_you: "/thank-you",
   thank_you_with_order_id: (orderId: string) => `/thank-you?order_id=${orderId}`,

@@ -77,7 +77,7 @@ export const FOOTER_MENU_2_ITEMS: TMenuItem[] = [
   },  
   {
     type: TButtonType.LINK,
-    href: paths.terms,
+    href: paths.terms_and_conditions,
     label: TEXT.FOOTER.MENU_2[1].LABEL,
   },
   {

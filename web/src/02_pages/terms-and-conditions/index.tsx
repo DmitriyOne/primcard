@@ -3,7 +3,7 @@ import { PolicyContent } from "@/src/03_widgets/policy-content/ui"
 import { cn } from "@/src/06_shared/libs"
 import { Section } from "@/src/06_shared/ui"
 
-export const TermsPage = () => {
+export const TermsAndConditionsPage = () => {
 
   return (
     <Section
