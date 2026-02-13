@@ -54,6 +54,7 @@ export const Select = ({
           className={cn(
             "block",
             "text-sm md:text-base text-white",
+            "tracking-tight leading-[140%]",
             "mb-2",
             labelClassName,
           )}
@@ -140,6 +141,8 @@ export const Select = ({
                   className={cn(
                     "w-full",
                     "text-left",
+                    "text-base",
+                    "tracking-tight leading-[140%]",
                     "px-4 py-2.5",
                     "transition-colors duration-150",
                     "cursor-pointer",
