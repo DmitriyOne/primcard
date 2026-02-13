@@ -8,7 +8,7 @@ export const HeroGradientLayer = () => (
     className={cn(
       "absolute top-0 left-0",
       "w-full h-full",
-      "bg-[linear-gradient(116deg,#FFF_0%,#F90_8%,#E43806_14%,#050100_34%,#000_55%,#E43806_81.25%,#FFD900_90.38%,#FFF_100%)]",
+      "bg-[linear-gradient(116deg,#FFF_0%,#F90_8%,#E43806_14%,#050100_34%,#000_40%,#000_50%,#000_60%,#000_70%,#E43806_81.25%,#E68900_90.38%,#E8E8E8_100%)]",
     )}
   />
 )
@@ -34,9 +34,9 @@ export const HeroBackgroundBlur = () => (
   />
 )
 
-export const HeroStripes = () => (
+export const HeroStripes = ({ count = 14 }: { count?: number }) => (
   <>
-    {Array.from({ length: 14 }, (_, i) => `blur-layer-${i}`).map(
+    {Array.from({ length: count }, (_, i) => `blur-layer-${i}`).map(
       (id) => (
         <div
           key={id}
