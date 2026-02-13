@@ -73,8 +73,8 @@ export const ThankYouBackground = () => {
             "absolute",
             "bottom-[50px] md:bottom-[70px]",
             "left-0",
-            "w-6 md:w-8",
-            "h-6 md:h-8",
+            "w-4 md:w-5",
+            "h-4 md:h-5",
             Z_INDEX_CLASSES.THANK_YOU_BACKGROUND_ICON,
           ),
         }}
