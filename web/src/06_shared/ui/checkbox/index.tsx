@@ -1,10 +1,10 @@
-import { InputHTMLAttributes } from "react"
+import { InputHTMLAttributes, ReactNode } from "react"
 import { cn } from "@/src/06_shared/libs"
 import { isValidArray } from "@/src/06_shared/utils"
 import { IconChecked } from "@/src/06_shared/ui/icons/checked"
 
 type TProps = Omit<InputHTMLAttributes<HTMLInputElement>, "className" | "type" | "checked"> & {
-  label: string
+  label: ReactNode
   className?: string
   labelClassName?: string
   errors: string[] | null
