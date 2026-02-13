@@ -27,7 +27,7 @@ import { IconCapabilityPrivacy } from "@/src/06_shared/ui/icons/capability-priva
 import { IconJourneyStepsStraightSolid, IconJourneyStepsCurvedSolid } from "@/src/06_shared/ui/icons/journey-steps-solid"
 import { IconDashLineFromBangladeshToCanada, IconDashLineFromBangladeshToChina } from "@/src/06_shared/ui/icons/dash-line-from-to-flag"
 import { IconChecked } from "@/src/06_shared/ui/icons/checked"
-import { IconDone } from "@/src/06_shared/ui/icons/done"
+import { IconDoneBgGradient, IconDoneSolid } from "@/src/06_shared/ui/icons/done"
 import { IconCopy } from "@/src/06_shared/ui/icons/copy"
 import { IconArrowFullSolid, IconArrowShortSolid } from "@/src/06_shared/ui/icons/arrow"
 import { IconBlingSolid } from "@/src/06_shared/ui/icons/bling-solid"
@@ -63,7 +63,8 @@ export const ICONS = {
   dashLineFromBangladeshToCanada: IconDashLineFromBangladeshToCanada,
   dashLineFromBangladeshToChina: IconDashLineFromBangladeshToChina,
   checked: IconChecked,
-  done: IconDone,
+  doneBgGradient: IconDoneBgGradient,
+  doneSolid: IconDoneSolid,
   copy: IconCopy,
   arrowFullSolid: IconArrowFullSolid,
   arrowShortSolid: IconArrowShortSolid,
