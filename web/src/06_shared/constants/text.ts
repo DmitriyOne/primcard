@@ -240,6 +240,13 @@ export const TEXT = {
       TITLE: "Standard pricing",
     },
   },
+  THANK_YOU: {
+    BG_LABEL: "Success",
+    TITLE: "Thank you for your order!",
+    DESCRIPTION: "To track your order status, please sign up on our platform.",
+    SUB_DESCRIPTION: "Our team will be in touch shortly to guide you through the next steps.",
+    YOUR_ID_LABEL: "Your ID:",
+  },
   COOKIES: {
     CURRENT_DATE: "Current as of 2 Feb 2026",
     TITLE: "Cookies Policy",
