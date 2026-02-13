@@ -15,6 +15,10 @@ export const TEXT = {
         "withdraw cash with crypto",
       ],
     },
+    THANK_YOU: {
+      TITLE: "Thank you",
+      DESCRIPTION: "Thank you for your order. To track your order status, please sign up on our platform.",
+    },
     HOME: {
       TITLE: "No KYC crypto card with high cash withdrawal limits",
       DESCRIPTION: "A privacy-first crypto card with no KYC onboarding, fast setup and daily cash withdrawals of up to $20,000. Spend crypto globally with confidence.",
