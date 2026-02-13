@@ -22,7 +22,7 @@ export const Navbar = () => {
         items={HEADER_MENU_ITEMS}
         className={cn(
           "max-lg:items-center",
-          "max-md:bg-dark",
+          "max-lg:bg-dark",
           "max-lg:pt-24 max-lg:px-4",
           "max-lg:fixed max-lg:top-0 max-lg:-left-full",
           "max-lg:w-full max-lg:h-full",
