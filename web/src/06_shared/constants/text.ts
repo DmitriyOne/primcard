@@ -15,6 +15,10 @@ export const TEXT = {
         "withdraw cash with crypto",
       ],
     },
+    THANK_YOU: {
+      TITLE: "Thank you",
+      DESCRIPTION: "Thank you for your order. To track your order status, please sign up on our platform.",
+    },
     HOME: {
       TITLE: "No KYC crypto card with high cash withdrawal limits",
       DESCRIPTION: "A privacy-first crypto card with no KYC onboarding, fast setup and daily cash withdrawals of up to $20,000. Spend crypto globally with confidence.",
@@ -239,6 +243,13 @@ export const TEXT = {
     STANDARD: {
       TITLE: "Standard pricing",
     },
+  },
+  THANK_YOU: {
+    BG_LABEL: "Success",
+    TITLE: "Thank you for your order!",
+    DESCRIPTION: "To track your order status, please sign up on our platform.",
+    SUB_DESCRIPTION: "Our team will be in touch shortly to guide you through the next steps.",
+    YOUR_ID_LABEL: "Your ID:",
   },
   COOKIES: {
     CURRENT_DATE: "Current as of 2 Feb 2026",

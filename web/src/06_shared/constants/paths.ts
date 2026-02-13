@@ -6,6 +6,8 @@ export const paths = {
   privacy: "/privacy",
   terms: "/terms",
   cookies: "/cookies",
+  thank_you: "/thank-you",
+  thank_you_with_order_id: (orderId: string) => `/thank-you?order_id=${orderId}`,
 } as const
 
 export const external_paths = {
