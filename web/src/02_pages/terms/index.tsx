@@ -9,8 +9,8 @@ export const TermsPage = () => {
     <Section
       className={cn(
         "flex-1 flex",
-        "pt-36 lg:pt-52",
-        "pb-16 lg:pb-32",
+        "pt-28 lg:pt-44",
+        "pb-16 lg:pb-24",
       )}
     >
       <div
