@@ -101,7 +101,7 @@ export const PhoneInput = ({ textKey, errors, isPending, required, defaultValue 
         </div>
       </div>
       {hasErrors && (
-        <ul className='mt-1 list-disc list-inside flex flex-col gap-y-0.5 text-red'>
+        <ul className='mt-1 list-disc list-inside flex flex-col-reverse gap-y-0.5 text-red'>
           {errors.map((error, index) => (
             <li
               // eslint-disable-next-line react/no-array-index-key
