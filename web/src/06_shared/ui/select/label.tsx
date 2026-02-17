@@ -3,9 +3,10 @@ import { cn } from "../../libs"
 type TProps = {
   label: string
   labelClassName: string | undefined
+  required: boolean | undefined
 }
 
-export const SelectLabel = ({ label, labelClassName }: TProps) => {
+export const SelectLabel = ({ label, labelClassName, required }: TProps) => {
 
   return (
     <label
@@ -18,6 +19,7 @@ export const SelectLabel = ({ label, labelClassName }: TProps) => {
       )}
     >
       {label}
+      {required && <span className="text-red ml-0.5">*</span>}
     </label>
   )
 }

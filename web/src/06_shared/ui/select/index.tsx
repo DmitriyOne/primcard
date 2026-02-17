@@ -1,7 +1,5 @@
 "use client"
 
-import { useId } from "react"
-
 import { cn } from "../../libs"
 import { Z_INDEX_CLASSES } from "../../constants"
 import type { TSelectOption } from "../../types"
@@ -29,6 +27,7 @@ type TProps = {
   containerClassName?: string
   isSearchable?: boolean
   searchPlaceholder?: string
+  required?: boolean
 }
 
 export const Select = ({
@@ -49,8 +48,8 @@ export const Select = ({
   optionIconClassName,
   isSearchable,
   searchPlaceholder,
+  required,
 }: TProps) => {
-  const labelId = useId()
 
   const {
     selectRef,
@@ -76,6 +75,7 @@ export const Select = ({
         <SelectLabel
           label={label}
           labelClassName={labelClassName}
+          required={required}
         />
       )}
 
@@ -88,7 +88,6 @@ export const Select = ({
           handleToggleOpen={handleToggleOpen}
           isOpen={isOpen}
           label={label}
-          labelId={labelId}
           buttonClassName={buttonClassName}
           buttonWrapperClassName={buttonWrapperClassName}
           buttonIconClassName={buttonIconClassName}

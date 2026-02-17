@@ -10,9 +10,10 @@ type TProps = {
   textKey: TOrderPlanTextKey
   isPending: boolean
   errors: string[] | null
+  required?: boolean
 }
 
-export const PhoneInput = ({ textKey, errors, isPending }: TProps) => {
+export const PhoneInput = ({ textKey, errors, isPending, required }: TProps) => {
   const { selectedCountry, selectedOption, options, handleSetCountry } = usePhoneByCountry()
 
   const hasErrors = isValidArray(errors)
@@ -31,6 +32,7 @@ export const PhoneInput = ({ textKey, errors, isPending }: TProps) => {
           )}
         >
           {TEXT.ORDER[textKey].FORM.ITEMS[2].LABEL}
+          {required && <span className="text-red ml-0.5">*</span>}
         </label>
         <div
           className={cn(
