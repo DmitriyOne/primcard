@@ -13,6 +13,7 @@ type TProps = {
   buttonIconClassName: string | undefined
   selectedOption: TSelectOption | undefined | null
   placeholder: string | undefined
+  isError: boolean
 }
 
 export const SelectButton = ({
@@ -24,6 +25,7 @@ export const SelectButton = ({
   buttonIconClassName,
   selectedOption,
   placeholder,
+  isError,
 }: TProps) => {
   const id = useId()
 
@@ -45,6 +47,8 @@ export const SelectButton = ({
         "transition-all duration-200",
         "cursor-pointer",
         "disabled:cursor-not-allowed disabled:opacity-40",
+        "border border-solid border-transparent",
+        isError && "border-red",
         buttonClassName,
       )}
     >

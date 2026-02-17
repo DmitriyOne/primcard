@@ -101,6 +101,7 @@ export const Select = ({
             buttonIconClassName={buttonIconClassName}
             selectedOption={selectedOption}
             placeholder={placeholder}
+            isError={hasErrors}
           />
           {isOpen && (
             <div
