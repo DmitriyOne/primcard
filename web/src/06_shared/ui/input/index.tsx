@@ -89,7 +89,6 @@ export const Input = ({
             "autofill:border-transparent",
             "autofill:shadow-[inset_0_0_0px_1000px_#191919]",
             "autofill:[-webkit-text-fill-color:white]",
-            "[&:-webkit-autofill]:border-none",
             disabled && "opacity-40 cursor-not-allowed",
             hasErrors && "border-red",
             inputClassName,
