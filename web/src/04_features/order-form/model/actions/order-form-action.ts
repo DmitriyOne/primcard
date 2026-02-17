@@ -1,8 +1,9 @@
 "use server"
 
 import z from "zod"
+import { redirect } from "next/navigation"
 
-import { INPUT_IDS } from "@/src/06_shared/constants"
+import { INPUT_IDS, paths } from "@/src/06_shared/constants"
 import { delay } from "@/src/06_shared/utils"
 
 import { TOrderFormActionState, TOrderFormErrors } from "../types"
@@ -48,6 +49,8 @@ export const orderAction = async (
   console.log("validatedData", validatedData.data)
 
   await delay(3000)
+
+  redirect(paths.thank_you_with_order_id("ABC123"))
 
   return {
     success: true,
