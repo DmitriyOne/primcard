@@ -1,3 +1,5 @@
+import { useId } from "react"
+
 import type { TSelectOption } from "../../types"
 import { cn } from "../../libs"
 import { Icon } from "../icons"
@@ -6,7 +8,6 @@ type TProps = {
   handleToggleOpen: () => void
   isOpen: boolean
   label: string | undefined
-  labelId: string | undefined
   buttonClassName: string | undefined
   buttonWrapperClassName: string | undefined
   buttonIconClassName: string | undefined
@@ -18,13 +19,13 @@ export const SelectButton = ({
   handleToggleOpen,
   isOpen,
   label,
-  labelId,
   buttonClassName,
   buttonWrapperClassName,
   buttonIconClassName,
   selectedOption,
   placeholder,
 }: TProps) => {
+  const id = useId()
 
   return (
     <button
@@ -32,7 +33,7 @@ export const SelectButton = ({
       onClick={handleToggleOpen}
       aria-haspopup="listbox"
       aria-expanded={isOpen}
-      aria-labelledby={label ? labelId : undefined}
+      aria-labelledby={label ? id : undefined}
       className={cn(
         "w-full",
         "text-base text-gray-light/50 text-left tracking-tight leading-[140%]",
