@@ -11,25 +11,33 @@ type TProps = {
   options: TSelectOption[]
   value: string | null
   onChange: (value: string) => void
+  selectedOption?: TSelectOption | null
   placeholder?: string
   label?: string
   labelClassName?: string
   buttonClassName?: string
+  buttonWrapperClassName?: string
+  buttonIconClassName?: string
   listContainerClassName?: string
   optionClassName?: string
   optionIconClassName?: string
   className?: string
+  containerClassName?: string
 }
 
 export const Select = ({
+  selectedOption: selectedOptionProps,
   options = [],
   value,
   onChange,
   placeholder,
   label,
   className,
+  containerClassName,
   labelClassName,
   buttonClassName,
+  buttonWrapperClassName,
+  buttonIconClassName,
   listContainerClassName,
   optionClassName,
   optionIconClassName,
@@ -43,7 +51,7 @@ export const Select = ({
     handleToggleOpen,
     handleSelect,
     handleKeyDown,
-  } = useSelect({ options, value, onChange })
+  } = useSelect({ options, value, onChange, selectedOption: selectedOptionProps })
 
   return (
     <div className={cn("w-full", className)}>
@@ -65,7 +73,7 @@ export const Select = ({
 
       <div
         ref={selectRef}
-        className="relative w-full"
+        className={cn("relative w-full", containerClassName)}
         onKeyDown={handleKeyDown}
       >
         <button
@@ -93,6 +101,7 @@ export const Select = ({
               "flex items-center justify-between",
               "gap-x-3",
               "whitespace-nowrap text-ellipsis",
+              buttonWrapperClassName,
             )}
           >
             <span className="min-w-0 truncate">
@@ -106,6 +115,7 @@ export const Select = ({
                   "w-3 h-3 text-gray-light/50",
                   "transition-transform duration-200",
                   isOpen && "rotate-180",
+                  buttonIconClassName,
                 ),
               }}
             />

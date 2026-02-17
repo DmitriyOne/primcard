@@ -3,14 +3,16 @@ import { cn } from "../../libs"
 import { isValidArray } from "../../utils"
 import { TPosition } from "../../types"
 
-type TProps = Omit<InputHTMLAttributes<HTMLInputElement>, "className" | "name"> & {
-  label?: string
-  position?: TPosition
-  className?: string
-  labelClassName?: string
-  errors: string[] | null
-  inputClassName?: string
-}
+type TProps =
+  Omit<InputHTMLAttributes<HTMLInputElement>, "className" | "name"> & {
+    label?: string
+    position?: TPosition
+    className?: string
+    containerClassName?: string
+    labelClassName?: string
+    errors: string[] | null
+    inputClassName?: string
+  }
 
 export const Input = ({
   id,
@@ -19,6 +21,7 @@ export const Input = ({
   errors,
   position = "top",
   className,
+  containerClassName,
   labelClassName,
   inputClassName,
   ...props
@@ -31,6 +34,7 @@ export const Input = ({
       className={cn(
         "w-full",
         "flex flex-col",
+        className,
       )}
     >
       <div
@@ -41,7 +45,7 @@ export const Input = ({
           position === "right" && "flex-row-reverse items-center justify-end",
           position === "top" && "flex-col items-start justify-center",
           position === "bottom" && "flex-col-reverse items-end justify-center",
-          className,
+          containerClassName,
         )}
       >
 
@@ -68,7 +72,7 @@ export const Input = ({
           id={id}
           name={id}
           className={cn(
-            "w-full rounded-xl p-3 outline-none",
+            "w-full p-3 outline-none",
             "px-4 py-3",
             "shrink-0",
             "text-base text-white",
