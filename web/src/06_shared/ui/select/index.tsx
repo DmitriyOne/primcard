@@ -86,7 +86,7 @@ export const Select = ({
             "w-full",
             "text-base text-gray-light/50 text-left tracking-tight leading-[140%]",
             selectedOption && "text-white",
-            "px-4 py-3",
+            "px-[18px] py-3",
             "bg-gray-medium",
             "rounded-full",
             "focus:outline-none focus-visible:ring-1 focus-visible:ring-gray-light focus-visible:border-gray-light",
