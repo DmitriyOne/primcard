@@ -31,6 +31,7 @@ import { IconDoneBgGradient, IconDoneSolid } from "@/src/06_shared/ui/icons/done
 import { IconCopy } from "@/src/06_shared/ui/icons/copy"
 import { IconArrowFullSolid, IconArrowShortSolid } from "@/src/06_shared/ui/icons/arrow"
 import { IconBlingSolid } from "@/src/06_shared/ui/icons/bling-solid"
+import { IconSearchSolid } from "@/src/06_shared/ui/icons/search-solid"
 
 export const ICONS = {
   logo: IconLogo,
@@ -69,4 +70,5 @@ export const ICONS = {
   arrowFullSolid: IconArrowFullSolid,
   arrowShortSolid: IconArrowShortSolid,
   blingSolid: IconBlingSolid,
+  searchSolid: IconSearchSolid,
 } as const satisfies Record<string, ComponentType>

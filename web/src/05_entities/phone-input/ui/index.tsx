@@ -45,6 +45,8 @@ export const PhoneInput = ({ textKey, errors, isPending }: TProps) => {
           )}
         >
           <Select
+            isSearchable
+            searchPlaceholder={TEXT.ORDER[textKey].FORM.ITEMS[2].SEARCH_PLACEHOLDER}
             className="w-fit"
             containerClassName="static"
             buttonClassName={cn(
