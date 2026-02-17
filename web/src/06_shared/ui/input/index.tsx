@@ -1,7 +1,9 @@
-import { InputHTMLAttributes } from "react"
+import type { InputHTMLAttributes } from "react"
+
 import { cn } from "../../libs"
 import { isValidArray } from "../../utils"
-import { TPosition } from "../../types"
+
+import type { TPosition } from "../../types"
 
 type TProps =
   Omit<InputHTMLAttributes<HTMLInputElement>, "className" | "name"> & {
@@ -72,7 +74,7 @@ export const Input = ({
           id={id}
           name={id}
           className={cn(
-            "w-full p-3 outline-none",
+            "w-full outline-none",
             "px-4 py-3",
             "shrink-0",
             "text-base text-white",
