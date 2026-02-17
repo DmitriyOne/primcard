@@ -9,6 +9,7 @@ import { env_client } from "@/src/06_shared/libs/env/client"
 
 import "./globals.css"
 import { isProduction } from "@/src/06_shared/utils"
+import { UserGeoLocation } from "@/src/05_entities/user-geo-location"
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: TProps) {
         <FullScreen>
           <Layout>
             {children}
+            <UserGeoLocation />
           </Layout>
         </FullScreen>
       </body>

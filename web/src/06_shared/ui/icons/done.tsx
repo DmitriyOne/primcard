@@ -3,7 +3,7 @@ type TProps = {
   className?: string
 }
 
-export const IconDone = ({ className }: TProps) => {
+export const IconDoneBgGradient = ({ className }: TProps) => {
   return (
     <svg
       fill="none"
@@ -59,6 +59,21 @@ export const IconDone = ({ className }: TProps) => {
           />
         </linearGradient>
       </defs>
+    </svg>
+  )
+}
+
+export const IconDoneSolid = ({ className }: TProps) => {
+  return (
+    <svg
+      fill="none"
+      className={className}
+      viewBox="0 0 13 10"
+    >
+      <path
+        d="M4.407 7.313L11.47.25a.8.8 0 0 1 1.167 0 .81.81 0 0 1 .25.594.81.81 0 0 1-.25.593L4.99 9.104a.8.8 0 0 1-.583.25.8.8 0 0 1-.583-.25L.24 5.521c-.167-.167-.247-.364-.24-.593a.85.85 0 0 1 .261-.594.81.81 0 0 1 .594-.25c.229.001.427.084.593.25l2.958 2.979z"
+        fill="currentColor"
+      />
     </svg>
   )
 }

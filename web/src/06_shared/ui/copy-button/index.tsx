@@ -29,7 +29,7 @@ export const CopyButton = ({
     >
       {textToCopy}
       <Icon
-        id={isCopied ? "done" : "copy"}
+        id={isCopied ? "doneSolid" : "copy"}
         className="w-6 h-6"
       />
     </button>

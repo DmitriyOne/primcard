@@ -81,7 +81,7 @@ export const ThankYouBackground = () => {
       />
 
       <Icon
-        id="done"
+        id="doneBgGradient"
         className="w-full h-full"
         background={{
           rounded: "full",
