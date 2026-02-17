@@ -11,9 +11,10 @@ type TProps = {
   isPending: boolean
   errors: string[] | null
   required?: boolean
+  defaultValue?: string
 }
 
-export const PhoneInput = ({ textKey, errors, isPending, required }: TProps) => {
+export const PhoneInput = ({ textKey, errors, isPending, required, defaultValue }: TProps) => {
   const { selectedCountry, selectedOption, options, handleSetCountry } = usePhoneByCountry()
 
   const hasErrors = isValidArray(errors)
@@ -50,14 +51,14 @@ export const PhoneInput = ({ textKey, errors, isPending, required }: TProps) => 
             isSearchable
             searchPlaceholder={TEXT.ORDER[textKey].FORM.ITEMS[2].SEARCH_PLACEHOLDER}
             className="w-fit"
-            containerClassName="static"
+            contentClassName="static"
             buttonClassName={cn(
               "min-w-[70px]",
               "text-2xl",
               "px-4 py-2",
               "bg-transparent",
               "rounded-none",
-              "border-r border-solid border-gray-light/30",
+              "border-r border-solid border-r-gray-light/30",
             )}
             buttonWrapperClassName="justify-center"
             buttonIconClassName="text-white"
@@ -66,6 +67,7 @@ export const PhoneInput = ({ textKey, errors, isPending, required }: TProps) => 
             selectedOption={selectedOption}
             value={selectedOption?.value || null}
             onChange={handleSetCountry}
+            errors={null}
           />
           <div className="flex-1 flex items-center">
             <Input
@@ -93,6 +95,7 @@ export const PhoneInput = ({ textKey, errors, isPending, required }: TProps) => 
               errors={null}
               disabled={isPending}
               inputMode="tel"
+              defaultValue={defaultValue}
             />
           </div>
         </div>
