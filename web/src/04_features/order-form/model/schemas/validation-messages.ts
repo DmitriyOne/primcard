@@ -10,6 +10,9 @@ export const ORDER_FORM_VALIDATION_MESSAGES = {
   phone: {
     required: "Phone is required",
     invalid: "Invalid phone number",
+    min_length: "Phone number must be at least 7 characters long",
+    max_length: "Phone number must be less than 15 characters long",
+    invalid_format: "The number does not valid for the selected country",
   },
   country_code: {
     required: "Country code is required",
@@ -20,6 +23,6 @@ export const ORDER_FORM_VALIDATION_MESSAGES = {
     invalid: "Invalid contact method",
   },
   agreement: {
-    required: "You must agree to the terms and conditions",
+    required: "Agreement is required",
   },
 }

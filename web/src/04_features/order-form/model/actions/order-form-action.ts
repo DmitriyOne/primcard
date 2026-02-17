@@ -45,6 +45,8 @@ export const orderAction = async (
     }
   }
 
+  console.log("validatedData", validatedData.data)
+
   await delay(3000)
 
   return {
