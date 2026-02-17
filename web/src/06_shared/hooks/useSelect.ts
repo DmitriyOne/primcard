@@ -12,12 +12,14 @@ type TUseSelectParams = {
   options: TSelectOption[]
   value: string | null
   onChange: (value: string) => void
+  selectedOption?: TSelectOption | null
 }
 
 export const useSelect = ({
   options,
   value,
   onChange,
+  selectedOption: selectedOptionProp,
 }: TUseSelectParams) => {
   const [isOpen, setIsOpen] = useState(false)
   const [focusedIndex, setFocusedIndex] = useState(-1)
@@ -37,10 +39,12 @@ export const useSelect = ({
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
-  const selectedOption = useMemo(
+  const computedSelectedOption = useMemo(
     () => options.find((opt) => opt.value === value),
     [options, value],
   )
+
+  const selectedOption = selectedOptionProp || computedSelectedOption
 
   const selectedIndex = useMemo(
     () => options.findIndex((opt) => opt.value === value),
