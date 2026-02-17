@@ -86,6 +86,7 @@ export const Input = ({
             hasErrors && "border-red",
             inputClassName,
           )}
+          disabled={disabled}
           {...props}
         />
       </div>
@@ -105,8 +106,7 @@ export const Input = ({
             </li>
           ))}
         </ul>
-      )
-      }
+      )}
     </div>
   )
 }
