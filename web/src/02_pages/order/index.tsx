@@ -1,6 +1,7 @@
-import { ORDER_PLAN_TEXT_KEYS, TEXT, type TOrderPlanSlug } from "@/src/06_shared/constants"
+import { ORDER_PLAN_TEXT_KEYS, type TOrderPlanSlug } from "@/src/06_shared/constants"
 import { cn } from "@/src/06_shared/libs"
-import { Section, Title } from "@/src/06_shared/ui"
+import { Section } from "@/src/06_shared/ui"
+import { OrderContent } from "@/src/03_widgets/order-content/ui"
 
 type TProps = {
   plan: TOrderPlanSlug
@@ -13,23 +14,19 @@ export const OrderPage = ({ plan }: TProps) => {
     <Section
       className={cn(
         "flex-1 flex",
-        "pt-36 lg:pt-52",
-        "pb-16 lg:pb-32",
+        "pt-30 lg:pt-52",
+        "pb-10 lg:pb-32",
       )}
     >
       <div
         className={cn(
           "relative",
-          "flex-1 flex flex-col items-center justify-center",
-          "text-center",
+          "w-full max-w-6xl mx-auto",
+          "flex md:items-stretch",
+          "md:gap-x-8 lg:gap-x-12",
         )}
       >
-        <Title
-          as="h1"
-          className="text-4xl md:text-5xl lg:text-6xl"
-        >
-          {TEXT.ORDER[textKey].TITLE}
-        </Title>
+        <OrderContent textKey={textKey} />
       </div>
     </Section>
   )

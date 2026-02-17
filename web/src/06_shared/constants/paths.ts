@@ -3,9 +3,11 @@ import type { TOrderPlanSlug } from "./slugs"
 export const paths = {
   home: "/",
   order: (plan: TOrderPlanSlug) => `/order/${plan}`,
-  policy: "/policy",
-  terms: "/terms",
+  privacy: "/privacy",
+  terms_and_conditions: "/terms-and-conditions",
   cookies: "/cookies",
+  thank_you: "/thank-you",
+  thank_you_with_order_id: (orderId: string) => `/thank-you?order_id=${orderId}`,
 } as const
 
 export const external_paths = {
