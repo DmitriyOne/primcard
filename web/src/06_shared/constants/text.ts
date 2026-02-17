@@ -1,4 +1,7 @@
 export const TEXT = {
+  SELECT: {
+    NO_AVAILABLE_OPTIONS: "No available options",
+  },
   META: {
     GLOBAL: {
       TITLE: "No KYC crypto card with high cash withdrawal limits",
@@ -238,10 +241,82 @@ export const TEXT = {
   },
   ORDER: {
     PRE_ORDER: {
-      TITLE: "Pre-order Primcard",
+      TITLE: "Use your crypto, calmly and confidently",
+      FORM: {
+        TITLE: "Pre-order Primcard",
+        DESCRIPTION: "Share your contact details and preferred messenger. If approved, we’ll email you the next steps.",
+        ITEMS: [
+          {
+            LABEL: "Email",
+            PLACEHOLDER: "Enter your email",
+          },
+          {
+            LABEL: "Username",
+            PLACEHOLDER: "Enter your username",
+          },
+          {
+            LABEL: "Phone number",
+            SEARCH_PLACEHOLDER: "Search for countries",
+          },
+          {
+            LABEL: "Сontact method",
+            PLACEHOLDER: "Сhoose preferred contact method",
+          },
+          {
+            LABEL: "I agree to the Terms & Conditions and Privacy Policy.",
+            AGREEMENT_LABEL: {
+              START: "I agree to the ",
+              TERMS: "Terms & Conditions",
+              AND: " and ",
+              PRIVACY: "Privacy Policy",
+              END: ".",
+            },
+          },
+          {
+            LABEL: "Continue",
+            LOADING_LABEL: "Loading...",
+          },
+        ],
+      },
     },
     STANDARD: {
       TITLE: "Standard pricing",
+      FORM: {
+        TITLE: "Order Primcard",
+        DESCRIPTION: "Share your contact details and preferred messenger. If approved, we'll email you the next steps.",
+        ITEMS: [
+          {
+            LABEL: "Email",
+            PLACEHOLDER: "Enter your email",
+          },
+          {
+            LABEL: "Username",
+            PLACEHOLDER: "Enter your username",
+          },
+          {
+            LABEL: "Phone number",
+            SEARCH_PLACEHOLDER: "Search for countries",
+          },
+          {
+            LABEL: "Сontact method",
+            PLACEHOLDER: "Сhoose preferred contact method",
+          },
+          {
+            LABEL: "I agree to the Terms & Conditions and Privacy Policy.",
+            AGREEMENT_LABEL: {
+              START: "I agree to the ",
+              TERMS: "Terms & Conditions",
+              AND: " and ",
+              PRIVACY: "Privacy Policy",
+              END: ".",
+            },
+          },
+          {
+            LABEL: "Continue",
+            LOADING_LABEL: "Loading...",
+          },
+        ],
+      },
     },
   },
   THANK_YOU: {
