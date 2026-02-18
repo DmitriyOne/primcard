@@ -123,7 +123,7 @@ export const Select = ({
                   handleSearchChange={handleSearchChange}
                 />
               )}
-              <div className="w-full flex flex-col max-h-40 overflow-auto rounded-b-2xl">
+              <div className="w-full flex flex-col max-h-68 overflow-auto rounded-b-2xl">
                 <SelectOptionList
                   options={filteredOptions}
                   value={value}
