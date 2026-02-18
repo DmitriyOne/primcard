@@ -22,8 +22,6 @@ export const OrderPage = ({ plan }: TProps) => {
         className={cn(
           "relative",
           "w-full max-w-6xl mx-auto",
-          "flex md:items-stretch",
-          "md:gap-x-8 lg:gap-x-12",
         )}
       >
         <OrderContent textKey={textKey} />
