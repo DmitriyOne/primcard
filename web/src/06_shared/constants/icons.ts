@@ -27,6 +27,12 @@ import { IconCapabilityPrivacy } from "@/src/06_shared/ui/icons/capability-priva
 import { IconJourneyStepsStraightSolid, IconJourneyStepsCurvedSolid } from "@/src/06_shared/ui/icons/journey-steps-solid"
 import { IconDashLineFromBangladeshToCanada, IconDashLineFromBangladeshToChina } from "@/src/06_shared/ui/icons/dash-line-from-to-flag"
 import { IconChecked } from "@/src/06_shared/ui/icons/checked"
+import { IconDoneBgGradient, IconDoneSolid } from "@/src/06_shared/ui/icons/done"
+import { IconCopy } from "@/src/06_shared/ui/icons/copy"
+import { IconArrowFullSolid, IconArrowShortSolid } from "@/src/06_shared/ui/icons/arrow"
+import { IconBlingSolid } from "@/src/06_shared/ui/icons/bling-solid"
+import { IconSearchSolid } from "@/src/06_shared/ui/icons/search-solid"
+import { IconWhatsappFilled, IconTelegramFilled, IconFacebookFilled, IconDiscordFilled, IconSignalFilled, IconViberFilled } from "@/src/06_shared/ui/icons/socials"
 
 export const ICONS = {
   logo: IconLogo,
@@ -59,4 +65,17 @@ export const ICONS = {
   dashLineFromBangladeshToCanada: IconDashLineFromBangladeshToCanada,
   dashLineFromBangladeshToChina: IconDashLineFromBangladeshToChina,
   checked: IconChecked,
+  doneBgGradient: IconDoneBgGradient,
+  doneSolid: IconDoneSolid,
+  copy: IconCopy,
+  arrowFullSolid: IconArrowFullSolid,
+  arrowShortSolid: IconArrowShortSolid,
+  blingSolid: IconBlingSolid,
+  searchSolid: IconSearchSolid,
+  whatsappFilled: IconWhatsappFilled,
+  telegramFilled: IconTelegramFilled,
+  facebookFilled: IconFacebookFilled,
+  discordFilled: IconDiscordFilled,
+  signalFilled: IconSignalFilled,
+  viberFilled: IconViberFilled,
 } as const satisfies Record<string, ComponentType>

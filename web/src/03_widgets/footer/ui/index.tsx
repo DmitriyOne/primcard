@@ -53,10 +53,11 @@ export const Footer = () => {
           </Paragraph>
 
           <Menu
-            className="w-fit"
+            className="w-fit md:flex-row"
             items={FOOTER_MENU_2_ITEMS}
-            itemClassName="w-fit mb-4 lg:mr-8 2lg:mr-8"
+            itemClassName="w-fit mb-4 md:mb-0 md:mr-6 lg:mr-8 2lg:mr-8"
             linkClassName="text-xs md:text-base md:hover:underline"
+            linkActiveClassName="underline md:hover:underline"
           />
         </div>
       </Container>
