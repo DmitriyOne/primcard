@@ -1,6 +1,21 @@
-# Monorepo
+# Primcard
 
-This repository is a **monorepo** for the **Primcard** project.
+Marketing site with an order flow, and the Supabase backend behind it, in one monorepo.
+
+## What's in it
+
+- **`web/`**: Next.js (App Router) site: landing page, order flow (`/order/[plan]`, thank-you), legal pages (privacy, terms, cookies). Structured with Feature-Sliced Design (`src/01_app` to `src/06_shared`). Deployed on Vercel, one environment per branch.
+- **`api/`**: Supabase project: Postgres migrations, row-level security, an auth hook, email templates.
+- **`crm/`**: not started yet.
+
+## Roles and access
+
+The part of this repo I'd point a reviewer to first is the access model in `api/supabase/migrations`.
+
+- Three roles: `super-admin` (priority 100), `admin` (90), `manager` (80). Roles live in `user_roles`, priorities in their own table.
+- `custom_access_token_hook` writes the user's highest-priority role into the JWT as a `user_role` claim, so RLS policies can read it without a join on every request.
+- `check_role_hierarchy_permissions` decides whether an editor may assign a role: nobody changes their own role, and an editor needs a priority at least equal to the target's current maximum and to the new role (`super-admin` bypasses this). It runs as `security definer` because the role tables are not readable by the `authenticated` role.
+- Triggers create the profile and assign the default role on sign-up. Orders get a sequence-based order number and an `updated_at` trigger.
 
 ## Sections
 
