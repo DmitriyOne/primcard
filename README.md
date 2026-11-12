@@ -21,13 +21,13 @@ The part of this repo I'd point a reviewer to first is the access model in `api/
 
 - [Projects](#projects)
 - [Local setup and production deploy](#local-setup-and-production-deploy)
-- [Git workflow](#git-workflow)
+- [Branches](#branches)
 
 ## Projects
 
 - **Web**: `./web` ([open](./web))
 - **Api**: `./api` ([open](./api))
-- **CRM**: `./crm` — **coming soon** (not available yet)
+- **CRM**: not started yet
 
 ## Local setup and production deploy
 
@@ -35,11 +35,10 @@ You can find **local development** and **production deploy** instructions inside
 
 - Web: [`./web/README.md`](./web/README.md)
 - Api: [`./api/README.md`](./api/README.md)
-- CRM: `./crm/README.md` — **coming soon** (not available yet)
 
-## Git workflow
+## Branches
 
-We use strict branches:
+The repository uses three long-lived branches:
 
 - `master`: main layout / main release branch
 - `stage`: based on `master` (release to the staging domain)
